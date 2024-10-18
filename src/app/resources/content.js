@@ -1,21 +1,21 @@
-import { InlineCode } from "@/once-ui/components";
+import { ColorInput, InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Jaedon',
+    lastName:  'Munton',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Venture Capital and Technology Professional',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Europe/London',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['English', 'German', 'Afrikaans']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
     display: true,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    description: <>I occasionally write about technology, startups, economics, and diamonds. Signing up to this means I will let you know when I write, build or launch something cool :) <br/> <br/>Spoiler: something coming very soon.</>
 }
 
 const social = [
@@ -24,12 +24,12 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/jaedmunt',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/jaedonmunton/',
     },
     {
         name: 'X',
@@ -37,9 +37,19 @@ const social = [
         link: '',
     },
     {
-        name: 'Email',
+        name: 'Email - YAS Invest & Spartech',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:jaedon@yasinvest.com',
+    },
+    {
+        name: 'Email - Century 💎',
+        icon: 'email',
+        link: 'mailto:jmunton@centuryglobalpartners.com',
+    },
+    {
+        name: 'Email - NTU 🦁',
+        icon: 'email',
+        link: 'mailto:n1098983@my.ntu.ac.uk',
     },
 ]
 
@@ -47,8 +57,10 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Venture Capital and Technology Professional</>,
+    subline: <>I'm Jaedon, a soon-to-be economics graduate and Analyst Intern at <InlineCode style={{ color: 'cyan' }}>Spartech Ventures</InlineCode>, a <InlineCode style={{ color: 'cyan' }}>YAS Investments</InlineCode> fund  where I source MENAs most innovative <InlineCode style={{ color: 'gold' }}>startups</InlineCode>. We support<InlineCode style={{ color: 'gold' }}>founders</InlineCode> and <InlineCode style={{ color: 'gold' }}>ideas</InlineCode> shaping the region and the world. <br/>
+    <br/>
+    After hours, I build my own projects 💎.</>
 }
 
 const about = {
@@ -64,93 +76,171 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'https://cal.com/jaedonmunton/30min'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>I am a soon-to-be economics graduate and Analyst Intern at Spartech Ventures, a YAS Investments fund where I source MENA's most innovative startups and support founders and ideas shaping the region and the world.</>
     },
     work: {
         display: true, // set to false to hide this section
-        title: 'Work Experience',
+        title: 'Professional Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Century Global Partners',
+                timeframe: 'June 2024 - Present',
+                role: 'Chief Technology Officer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Cofounded a gemstone brokerage and retail technology firm bringing digital innovation to the retail jewellery sector (a ‘learn-before-you-earn’ project).</>,
+                    <>Formed a partnership with a prominent Antwerp-based direct-to-consumer diamond dealer to expand sales to the UK using a novel go-to-market strategy.</>,
+                    <>Developing a flagship bespoke digital service leveraging computer vision and image-to-3D models with a proprietary pricing algorithm.</>
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
+                images: []
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'YAS Investments (Spartech Ventures)',
+                timeframe: 'Oct 2023 - Present',
+                role: 'Venture Capital Analyst Intern',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Sourced for MENA-focused Spartech Venture II fund (seed, series A) successor to Spartech I ($100M, tech-enabled, sector agnostic).</>,
+                    <>Created marketing materials for the fund to attract capital during fundraising, focused on UAE and KSA sovereign wealth funds.</>,
+                    <>Outreach to founders seeking £1-2mm ticket sizes, qualifying startups for debt/equity financing, using written communication skills to generate memos.</>
                 ],
-                images: [ ]
+                images: []
+            },
+            {
+                company: 'Certie (& sister company Sertie)',
+                timeframe: 'Mar 2023 - Jun 2024',
+                role: 'Product & Development Lead',
+                achievements: [
+                    <>Managed 1 developer as Team lead for an ML platform converting text (like this CV) to a standardised taxonomy using natural language processing.</>,
+                    <>Research/product for Sidetree protocol (ETH) credential product – developing business cases, marketing strategy, decks and pitching to universities.</>,
+                    <>Delegate at London Tech Week (2023) and Gibraltar Finance Ministry (DLT framework author), interviews with Gibraltar Broadcasting Corporation.</>
+                ],
+                images: []
+            },
+            {
+                company: 'Chisholm Hunter',
+                timeframe: 'Nov 2022 - Present',
+                role: 'Sales Professional',
+                achievements: [
+                    <>Generated £145,000+ in sales per annum, part-time, using strong sales, customer relationship management skills and broad product knowledge.</>,
+                    <>Achieved the highest Sales-Per-Labour-Hour (SPLH) of ~£185 in Nottingham store for consecutive years – the leading KPI for individual performance.</>,
+                    <>Company-wide recognition for contributions including a £7000 sales day (4.7x weekly target) across 11 sales.</>
+                ],
+                images: []
             }
         ]
     },
     studies: {
         display: true, // set to false to hide this section
-        title: 'Studies',
+        title: 'Education',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
-            },
-            {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Nottingham Business School',
+                description: <>BA (Hons) Economics | [Sep 2022-present. Completion: Jun 2025]<br/><br/>
+                Research project (dissertation) topic: <br/><br/>
+                <InlineCode style={{ color: 'cyan' }}>How does open innovation impact innovation measurement in technology firms?</InlineCode><br/><br/>
+                Modules:<br/>
+                <InlineCode style={{ color: 'gold' }}>Y1</InlineCode> Principles of Microeconomics, Principles of Macroeconomics, Introduction to Finance for Economists, Quantitative Economics<br/><br/>
+                <InlineCode style={{ color: 'green' }}>Y2</InlineCode> Econometrics I, Applied Professional Development, Environmental and Resource Economics, Economic Evaluation<br/><br/>
+                <InlineCode style={{ color: 'gold' }}>Y3</InlineCode> Research Project, Investment Portfolio Management, Macroeconomics Issues and Policy, Developing Professional Impact, The World Economy<br/><br/>
+                Awards:<br/>
+                
+                Dean’s Award (Dec ’23)<br/> Sustainability in Practice <InlineCode style={{ color: 'gold' }}>Gold</InlineCode><br/> Student Group Executive <InlineCode style={{ color: 'gold' }}>Gold</InlineCode></>
             }
+            
         ]
     },
     technical: {
         display: true, // set to false to hide this section
-        title: 'Technical skills',
+        title: 'Technical Skills & Certifications',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+            title: 'Languages',
+            description: <>English <InlineCode style={{ color: 'gold' }}>Native</InlineCode>, German <InlineCode style={{ color: 'green' }}>Professional Working</InlineCode>, Afrikaans <InlineCode style={{ color: 'orange' }}>Limited Working</InlineCode></>,
+            images: []
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+            title: 'Software/Platforms',
+            description: <>
+                <InlineCode style={{ color: 'cyan' }}>Python</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>ReactJS</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>VSCode</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>Git</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>Docker</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>AWS</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>Gitpod</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>Streamlit</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>Jupyter</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>MongoDB</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>APIs</InlineCode>, <span></span>    
+                <InlineCode style={{ color: 'orange' }}>MS Office Suite</InlineCode>,
+                <InlineCode style={{ color: 'orange' }}>Excel</InlineCode>, 
+                <InlineCode style={{ color: 'orange' }}>Minitab</InlineCode>, 
+                <InlineCode style={{ color: 'orange' }}>Eviews</InlineCode>,<br/> 
+                <InlineCode style={{ color: 'green' }}>Notion</InlineCode>, 
+                <InlineCode style={{ color: 'green' }}>Monday</InlineCode>, 
+                <InlineCode style={{ color: 'green' }}>Canva</InlineCode>, 
+                <InlineCode style={{ color: 'green' }}>CRM systems</InlineCode>
+            </>,
+            images: []
+            },
+            {
+            title: 'Certifications',
+            description: <>
+                Bloomberg - Bloomberg Market Concepts <a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
+                Newton Venture Program - Newton Foundations <a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
+                Coursera (Imperial College London) – Mathematics for Machine Learning <br/> 
+                Wall Street prep – Accounting, LBO, DCF financial modelling.<br/> 
+                
+                FreeCodeCamp – Solidity and Smart Contracts, Blockchain
+            </>,
+            images: []
+            }
+        ]
+        },
+        extracurricular: {
+        display: true, // set to false to hide this section
+        title: 'Extracurricular Activities',
+        activities: [
+            {
+                title: 'President | Investment Society',
+                timeframe: 'Jul 2023 - Present',
+                description: <>Launched and grew the society to over 100 active members, leading equity research sessions, competitions, speaker events, and socials.<br/>
+                Commercially aware, organising guest speakers including the UK Minister for Enterprise, Markets, and Small Business, CEO of Wall Street Oasis.<br/>
+                Equities research and trading for the Bloomberg Trading Competition (‘23, ‘24); M&A strategic review for National Investment Banking Competition (’22,’23).<br/>
+                Formed strategic partnerships with the Womens Societies Alliance and Warwick Incubator to expand our offering and promote inclusivity.</>
+            },
+            {
+                title: 'Vice President & Treasurer | Debating Society',
+                timeframe: 'Sep 2023 - Jul 2024',
+                description: <>Managed society finance with payment request forms and invoices. Led sessions, wrote and chaired motions and produced marketing materials.<br/>
+                Competed at the World Universities Debating Competition (‘23) in Madrid; hosted the East Midlands Debating Competition (‘24) for 7 universities.</>
+            },
+            {
+                title: 'Startup Mentor | Warwick Incubator, Warwick University Business School',
+                timeframe: 'Jan 2024 - Mar 2024',
+                description: <>Advised 4 startups, with attention to detail, iterating and preparing their pitch decks and presentations for VC investors at the Shard, London.</>
+            },
+            {
+                title: 'Finance Executive | Enactus UK',
+                timeframe: 'Sep 2024 - Present',
+                description: <>Managed the financial health of Enactus NTU, including revenue analysis, expense tracking, and growth modelling.<br/>
+                Oversaw annual budgeting, bank account management, and financial reporting to the executive team and stakeholders.<br/>
+                Collaborated with the Commercial Director to maximise income generation through grants, sponsorships, and fundraising initiatives.</>
+            },
+            {
+                title: 'Course Representative - Economics | NTSU',
+                timeframe: 'Oct 2022 - Jul 2023',
+                description: <>Surveyed and converted feedback into recommendations, presented to university administration, to advocate key issues on behalf of my cohort.</>
+            },
+            {
+                title: 'Volunteer Producer (Elections) | Sky News',
+                timeframe: 'Jun 2024 - Jun 2024',
+                description: <>Provided live global coverage of the Ashfield declaration, streaming Reform UK's first parliamentary seat won by Lee Anderson in the 2024 general election.</>
             }
         ]
     }
@@ -158,7 +248,7 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Writing about...',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
