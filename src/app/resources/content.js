@@ -110,7 +110,7 @@ const about = {
                 images: []
             },
             {
-                company: 'Certie (& sister company Sertie)',
+                company: 'Certie (Oxford-Innovation-backed)',
                 timeframe: 'Mar 2023 - Jun 2024',
                 role: 'Product & Development Lead',
                 achievements: [
