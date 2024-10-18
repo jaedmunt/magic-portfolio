@@ -1,0 +1,47 @@
+---
+title: "Navigating the Foundation Programme Lottery: A New Tool for UK Junior Doctors"
+publishedAt: "2024-10-17"
+summary: "A tool to help UK medics navigate the stressful process of choosing their Foundation Programme deanery preferences using probabilities and Monte Carlo simulations."
+images:
+  - "/images/projects/fp-optimizer/cover-01.png"
+  - "/images/projects/fp-optimizer/cover-02.png"
+
+
+team:
+  - name: "Jaedon"
+    role: "Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/jaedonmunton"
+---
+
+## Overview
+
+Today, I finished off a simple tool to help UK medics navigate the sometimes stressful process of choosing their Foundation Programme deanery preferences.
+
+As a junior doctor in the UK, you have the opportunity to rank your preferred deaneries for your training placement.
+
+It used to be that you made your choices and were allocated based on merit, but this meant all of the best doctors flocked to the same locations.
+
+Placements are now assigned randomly, and competition ratios vary across deaneries. Now, it is a lottery as to whether you get your first choice.
+
+Lotteries are bread and butter for economists, so I thought I'd help out.
+
+## Introducing the Deanery Preference Optimizer
+
+The tool calculates the expected utility based on competition ratios and individual preferences. It then optimizes your rankings to maximize satisfaction and reduce the chances of ending up somewhere you would rather not be at all. It uses probabilities drawn from last year's stats of where people chose vs. where they ended up:
+
+[UK Foundation Programme Allocation Statistics](https://foundationprogramme.nhs.uk)
+
+To simulate the gamble that is this system, I threw in some Monte Carlo simulations to simulate what you might expect to get.
+
+It’s a practical way to ease the process for medics who are already juggling so much. It really is not good when you are supposed to be training and studying to become the doctors of tomorrow but are worrying whether you might be randomly exiled to rural Scotland (note: Scotland is one entire deanery).
+
+## Try It Out
+
+Feel free to check the Streamlit app out here:
+
+[Deanery Preference Optimizer](https://fp-preference-optimizer.streamlit.app/)
+
+## Spread the Word
+
+If you have any medics in your network, please kindly share on LinkedIn, send a link, or DM. If it's useful, I'd really appreciate feedback or a donation through the "Buy Me a Coffee" link on the page to validate this side project :)

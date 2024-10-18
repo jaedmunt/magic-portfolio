@@ -1,0 +1,72 @@
+---
+title: "Navigating the Foundation Programme Lottery"
+publishedAt: "2024-10-04"
+summary: "  A New Tool for UK Junior Doctors"
+---
+
+
+Today, I'm excited to share a project I've been working on—a simple yet powerful tool designed to help UK junior doctors navigate the often stressful process of selecting their Foundation Programme deanery preferences. As someone who has walked this path, I understand the anxiety that comes with the uncertainty of where you'll spend the next crucial years of your medical training.
+
+## The Challenge of Deanery Selection
+
+In the UK, after medical school, junior doctors enter the Foundation Programme, a two-year training period that lays the groundwork for their future medical careers. One of the first steps in this journey is ranking your preferred deaneries—geographical areas where you'll complete your rotations. This might seem straightforward, but the system's complexities make it anything but simple.
+
+### From Merit-Based to Lottery System
+
+Not too long ago, deanery allocations were based on merit. You'd rank your choices, and the highest-performing candidates would secure spots in their preferred locations. While this seemed fair on the surface, it led to an unintended consequence: a concentration of top doctors in certain areas, leaving others understaffed.
+
+To address this imbalance, the allocation process shifted to a semi-randomized system. Now, while your academic performance still matters for other aspects of your career, your deanery placement is determined by a lottery. Competition ratios vary across deaneries, making it a game of chance whether you'll end up in your first-choice location or somewhere entirely unexpected.
+
+## The Emotional Toll
+
+This lottery system adds a layer of stress for junior doctors already juggling the demands of exams, clinical placements, and personal lives. The prospect of being placed far from your support network or in an area that doesn't align with your personal or professional goals can be daunting. For instance, the thought of being randomly assigned to a remote part of Scotland (note: Scotland is considered a single deanery, encompassing a vast area) can be unsettling for those unprepared for such a move.
+
+## An Economist's Approach to the Problem
+
+Being trained in economics, I saw an opportunity to apply some of the field's principles to this challenge. Lotteries and probabilities are fundamental concepts in economics, particularly in game theory and decision-making under uncertainty. I wanted to create a tool that could bring some clarity and strategy to this otherwise random process.
+
+## Introducing the Deanery Preference Optimizer
+
+The tool I've developed calculates the expected utility of your deanery preferences based on two key factors:
+
+1. **Competition Ratios**: These are the number of applicants per available spot in each deanery, providing insight into how competitive each area is.
+   
+2. **Individual Preferences**: Your personal ranking of deaneries, reflecting where you'd most like to train.
+
+By combining these factors, the tool optimizes your ranking list to maximize your overall satisfaction. It aims to reduce the chances of ending up in a less desirable location by strategically ordering your preferences.
+
+### How It Works
+
+The tool utilizes data from last year's application cycle, specifically the probabilities of applicants getting into each deanery based on their preferences. This data is available [here](https://www.foundationprogramme.nhs.uk/wp-content/uploads/sites/2/2020/07/UKFP-2019-Applicants-Report.pdf).
+
+Monte Carlo Simulations**: To simulate the randomness of the allocation process, the tool employs Monte Carlo simulations. This method runs thousands of iterations to predict the likelihood of different outcomes, providing a probabilistic understanding of where you might end up.
+
+Optimization Algorithm**: The algorithm calculates the expected utility for each possible ranking order, considering both your preferences and the competition ratios. It then suggests an optimized list that balances your desires with the realities of the allocation system.
+
+## Why This Matters
+
+The goal is to empower junior doctors with information and strategy, turning a stressful guessing game into a more manageable decision-making process. By understanding the probabilities and optimizing your preferences accordingly, you can increase your chances of landing in a deanery that aligns with your goals and needs.
+
+## Try It Out Yourself
+
+I've made the tool accessible through a user-friendly Streamlit app, which you can find [here](https://fp-preference-optimizer.streamlit.app/). It's straightforward to use:
+
+## A Practical Solution for a Pressing Problem
+
+I believe this tool can make a real difference for many junior doctors facing the uncertainty of deanery allocations. It's a practical way to ease the process for medics who are already juggling so much. After all, when you're supposed to be focusing on becoming the doctors of tomorrow, worrying about being randomly exiled to an unfamiliar location shouldn't be an added burden.
+
+## Join the Conversation
+
+If you find this tool helpful, I'd love to hear your feedback. Your insights can help refine the app and make it even more beneficial for future applicants. Please feel free to share the link with any medics in your network who might find it useful.
+
+Share the app on [LinkedIn](https://www.linkedin.com) or send it directly to friends and colleagues.
+
+If you appreciate the tool, consider buying me a coffee through the link on the app page. Your support validates this side project and helps maintain the tool for future users.
+
+## Looking Ahead
+
+My hope is that this tool not only eases individual stress but also sparks a broader conversation about how we can improve systems within the medical field using interdisciplinary approaches. By applying economic principles to medical training pathways, perhaps we can find new solutions to persistent challenges.
+
+---
+
+Thank you for taking the time to read about this project. I look forward to your thoughts and hope the tool serves you well in your journey through the Foundation Programme.
