@@ -176,45 +176,40 @@ const createI18nContent = (t) => {
             {
                 src: '/images/gallery/img-01.jpg',
                 alt: 'image',
-                orientation: 'vertical'
+                orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-02.jpg',
+                src: '/images/gallery/img-02.png',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             { 
-                src: '/images/gallery/img-03.jpg',
+                src: '/images/gallery/img-03.png',
                 alt: 'image',
                 orientation: 'vertical'
             },
             { 
-                src: '/images/gallery/img-04.jpg',
+                src: '/images/gallery/img-04.png',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-05.jpg',
+                src: '/images/gallery/img-05.png',
                 alt: 'image',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/img-06.jpg',
+                src: '/images/gallery/img-06.png',
                 alt: 'image',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/img-07.jpg',
-                alt: 'image',
-                orientation: 'horizontal'
-            },
-            {
-                src: '/images/gallery/img-08.jpg',
+                src: '/images/gallery/img-08.JPG',
                 alt: 'image',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/img-09.jpg',
+                src: '/images/gallery/img-09.JPG',
                 alt: 'image',
                 orientation: 'horizontal'
             },
@@ -240,6 +235,11 @@ const createI18nContent = (t) => {
             },
             { 
                 src: '/images/gallery/img-14.jpg',
+                alt: 'image',
+                orientation: 'horizontal'
+            },
+            { 
+                src: '/images/gallery/img-15.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
             },
