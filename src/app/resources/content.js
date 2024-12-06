@@ -159,31 +159,31 @@ const about = {
         skills: [
             {
             title: 'Languages',
-            description: <>English <InlineCode style={{ color: 'gold' }}>Native</InlineCode>, German <InlineCode style={{ color: 'green' }}>Professional Working</InlineCode>, Afrikaans <InlineCode style={{ color: 'orange' }}>Limited Working</InlineCode></>,
+            description: <>English <InlineCode style={{ color: 'gold' }}>Native</InlineCode><br/>German <InlineCode style={{ color: 'green' }}>Professional Working</InlineCode><br/>Afrikaans <InlineCode style={{ color: 'orange' }}>Limited Working</InlineCode></>,
             images: []
             },
             {
             title: 'Software/Platforms',
             description: <>
-                <InlineCode style={{ color: 'cyan' }}>Python</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>ReactJS</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>VSCode</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>Git</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>Docker</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>AWS</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>Gitpod</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>Streamlit</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>Jupyter</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>MongoDB</InlineCode>, 
-                <InlineCode style={{ color: 'cyan' }}>APIs</InlineCode>, <span></span>    
-                <InlineCode style={{ color: 'orange' }}>MS Office Suite</InlineCode>,
-                <InlineCode style={{ color: 'orange' }}>Excel</InlineCode>, 
-                <InlineCode style={{ color: 'orange' }}>Minitab</InlineCode>, 
-                <InlineCode style={{ color: 'orange' }}>Eviews</InlineCode>,<br/> 
-                <InlineCode style={{ color: 'green' }}>Notion</InlineCode>, 
-                <InlineCode style={{ color: 'green' }}>Monday</InlineCode>, 
-                <InlineCode style={{ color: 'green' }}>Canva</InlineCode>, 
+                <InlineCode style={{ color: 'cyan' }}>Python</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>ReactJS</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>VSCode</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>Git</InlineCode> <br/> 
+                <InlineCode style={{ color: 'cyan' }}>Docker</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>AWS</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>Gitpod</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>Streamlit</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>Jupyter</InlineCode> <br/> 
+                <InlineCode style={{ color: 'cyan' }}>MongoDB</InlineCode>  
+                <InlineCode style={{ color: 'cyan' }}>APIs</InlineCode> <br/> 
+                <InlineCode style={{ color: 'orange' }}>MS Office Suite</InlineCode> 
+                <InlineCode style={{ color: 'orange' }}>Excel</InlineCode>  
+                <InlineCode style={{ color: 'orange' }}>Minitab</InlineCode>  
+                <InlineCode style={{ color: 'orange' }}>Eviews</InlineCode> <br/> 
+                <InlineCode style={{ color: 'green' }}>Notion</InlineCode>  
+                <InlineCode style={{ color: 'green' }}>Monday</InlineCode>  
+                <InlineCode style={{ color: 'green' }}>Canva</InlineCode>  
                 <InlineCode style={{ color: 'green' }}>CRM systems</InlineCode>
             </>,
             images: []
@@ -191,7 +191,7 @@ const about = {
             {
             title: 'Certifications',
             description: <>
-                Bloomberg - Bloomberg Market Concepts <a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
+                Bloomberg - Bloomberg Market Concepts<br/><a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
                 Newton Venture Program - Newton Foundations <a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
                 Coursera (Imperial College London) – Mathematics for Machine Learning <br/> 
                 Wall Street prep – Accounting, LBO, DCF financial modelling.<br/> 
