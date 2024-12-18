@@ -367,11 +367,6 @@ const gallery = {
             orientation: `horizontal`
         },
         { 
-            src: `${cdn}img-18.png`,
-            alt: `image`,
-            orientation: `horizontal`
-        },
-        { 
             src: `${cdn}img-20.JPG`,
             alt: `image`,
             orientation: `vertical`
@@ -421,6 +416,71 @@ const gallery = {
             alt: `image`,
             orientation: `vertical`
         },
+        { 
+            src: `${cdn}img-31.jpg`,
+            alt: `image`,
+            orientation: `horizontal`
+        },
+        { 
+            src: `${cdn}img-32.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-33.jpg`,
+            alt: `image`,
+            orientation: `horizontal`
+        },
+        { 
+            src: `${cdn}img-34.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-35.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-36.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-37.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-38.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-39.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-40.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-41.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-42.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-43.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        }
     ]
 }
 
