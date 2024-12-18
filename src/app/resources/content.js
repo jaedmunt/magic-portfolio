@@ -268,158 +268,158 @@ const work = {
     // All projects will be listed on the /home and /work routes
 }
 
+const cdn = 'https://jaedmuntonwebsite.s3.us-east-1.amazonaws.com/gallery/';
+
 const gallery = {
     label: 'Gallery',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
-        {
-            src: '/images/gallery/img-01.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-02.png',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
         { 
-            src: '/images/gallery/img-23.png',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-04.png',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-30.jpg`,
+            alt: `image`,
+            orientation: `vertical`
         },
         {
-            src: '/images/gallery/img-05.png',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-01.jpg`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         {
-            src: '/images/gallery/img-06.png',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-02.png`,
+            alt: `image`,
+            orientation: `horizontal`
+        },
+        { 
+            src: `${cdn}img-23.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-04.png`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         {
-            src: '/images/gallery/img-03.png',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-05.png`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         {
-            src: '/images/gallery/img-08.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-06.png`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         {
-            src: '/images/gallery/img-09.JPG',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-03.png`,
+            alt: `image`,
+            orientation: `vertical`
         },
         {
-            src: '/images/gallery/img-10.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-11.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-08.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         {
-            src: '/images/gallery/img-12.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-09.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         {
-            src: '/images/gallery/img-13.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-10.jpg`,
+            alt: `image`,
+            orientation: `vertical`
         },
         { 
-            src: '/images/gallery/img-14.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-11.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        {
+            src: `${cdn}img-12.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        {
+            src: `${cdn}img-13.jpg`,
+            alt: `image`,
+            orientation: `vertical`
         },
         { 
-            src: '/images/gallery/img-15.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-14.jpg`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-16.png',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-15.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-17.png',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-16.png`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-18.png',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        /*}
-        { 
-            {
-            src: '/images/gallery/img-19.png',
-            alt: 'image',
-            orientation: 'horizontal'
-        },*/
-        { 
-            src: '/images/gallery/img-20.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-17.png`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-21.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-18.png`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-22.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-20.JPG`,
+            alt: `image`,
+            orientation: `vertical`
         },
         { 
-            src: '/images/gallery/img-07.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-21.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-24.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-22.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-25.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-07.JPG`,
+            alt: `image`,
+            orientation: `vertical`
         },
         { 
-            src: '/images/gallery/img-26.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
+            src: `${cdn}img-24.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-27.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-25.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-28.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-26.JPG`,
+            alt: `image`,
+            orientation: `horizontal`
         },
         { 
-            src: '/images/gallery/img-29.jpg',
-            alt: 'image',
-            orientation: 'vertical'
+            src: `${cdn}img-27.JPG`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-28.jpg`,
+            alt: `image`,
+            orientation: `vertical`
+        },
+        { 
+            src: `${cdn}img-29.JPG`,
+            alt: `image`,
+            orientation: `vertical`
         },
     ]
 }
