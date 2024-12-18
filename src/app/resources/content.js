@@ -64,7 +64,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Venture Capital and Technology Professional</>,
-    subline: <>I'm Jaedon, Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: 'cyan' }}>ChipHub</InlineCode></Link> and Analyst at <Link href="https://www.yasinvest.com"><InlineCode style={{ color: 'cyan' }}>Spartech Ventures</InlineCode></Link>, a <InlineCode style={{ color: 'cyan' }}>YAS Investments</InlineCode> fund  where I source MENAs most innovative <InlineCode style={{ color: 'gold' }}>startups</InlineCode>. We support<InlineCode style={{ color: 'gold' }}>founders</InlineCode> and <InlineCode style={{ color: 'gold' }}>ideas</InlineCode> shaping the region and the world. <br/>
+    subline: <>I'm Jaedon, Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: 'cyan' }}>ChipHub</InlineCode></Link> and Analyst at <Link href="https://www.spartechvc.com"><InlineCode style={{ color: 'cyan' }}>Spartech Ventures</InlineCode></Link>, a <Link href="https://www.yasinvest.com"><InlineCode style={{ color: 'cyan' }}>YAS Investments</InlineCode></Link> fund  where I source MENAs most innovative <InlineCode style={{ color: 'gold' }}>startups</InlineCode>. We support<InlineCode style={{ color: 'gold' }}>founders</InlineCode> and <InlineCode style={{ color: 'gold' }}>ideas</InlineCode> shaping the region and the world. <br/>
     <br/>
     After hours, I build my own projects.</>
 }
