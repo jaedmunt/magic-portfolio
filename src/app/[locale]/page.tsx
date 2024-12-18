@@ -8,6 +8,7 @@ import { Mailchimp } from '@/components';
 import { Posts } from '@/components/blog/Posts';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import GitHubCalendar from 'react-github-calendar';
 
 export async function generateMetadata(
 	{params: {locale}}: { params: { locale: string }}
@@ -118,6 +119,17 @@ export default function Home(
 						</RevealFx>
 					</Flex>
 				
+			</Flex>
+			<Flex
+				fillWidth
+				direction="column"
+				paddingY="l" gap="s"
+				overflowX="hidden">
+				<RevealFx translateY="16" delay={0.6}>
+					<GitHubCalendar 
+						username="jaedmunt">
+					</GitHubCalendar>
+				</RevealFx>
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>
 				<Projects range={[1,1]} locale={locale}/>

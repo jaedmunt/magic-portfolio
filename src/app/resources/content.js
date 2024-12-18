@@ -1,4 +1,5 @@
 import { ColorInput, InlineCode } from "@/once-ui/components";
+import Link from "next/link";
 
 const person = {
     firstName: 'Jaedon',
@@ -37,6 +38,11 @@ const social = [
         link: '',
     },
     {
+        name: 'Email - ChipHub',
+        icon: 'email',
+        link: 'mailto:jaedon@chiphub.com',
+    },
+    {
         name: 'Email - YAS Invest & Spartech',
         icon: 'email',
         link: 'mailto:jaedon@yasinvest.com',
@@ -58,9 +64,9 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Venture Capital and Technology Professional</>,
-    subline: <>I'm Jaedon, a soon-to-be economics graduate and Analyst Intern at <InlineCode style={{ color: 'cyan' }}>Spartech Ventures</InlineCode>, a <InlineCode style={{ color: 'cyan' }}>YAS Investments</InlineCode> fund  where I source MENAs most innovative <InlineCode style={{ color: 'gold' }}>startups</InlineCode>. We support<InlineCode style={{ color: 'gold' }}>founders</InlineCode> and <InlineCode style={{ color: 'gold' }}>ideas</InlineCode> shaping the region and the world. <br/>
+    subline: <>I'm Jaedon, Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: 'cyan' }}>ChipHub</InlineCode></Link> and Analyst at <Link href="https://www.yasinvest.com"><InlineCode style={{ color: 'cyan' }}>Spartech Ventures</InlineCode></Link>, a <InlineCode style={{ color: 'cyan' }}>YAS Investments</InlineCode> fund  where I source MENAs most innovative <InlineCode style={{ color: 'gold' }}>startups</InlineCode>. We support<InlineCode style={{ color: 'gold' }}>founders</InlineCode> and <InlineCode style={{ color: 'gold' }}>ideas</InlineCode> shaping the region and the world. <br/>
     <br/>
-    After hours, I build my own projects 💎.</>
+    After hours, I build my own projects.</>
 }
 
 const about = {
