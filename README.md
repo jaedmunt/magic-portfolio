@@ -2,9 +2,98 @@
 
 Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
+## Gotchas:
+
+1. The main branch of the repo is hooked up to Vercel so please branch off with the guidance below, otherwise any breaks will show on the production site. 
+
+Please test for mobile, and use ismobile from react-device-detect to manage different on different devices and use the developer tools to check this. 
+
+```
+git branch <branch_name>
+```
+ideally just name it to yourself for ease, e.g:
+```
+git branch jaedon
+```
+to switch to the branch, use 
+```
+git checkout jaedon
+```
+just google the rest for how to request a merge with main...
+
+back to add more so I might as well update this. 
+
+To merge your branch, use 
+```
+git checkout <branch>
+```
+e.g 
+```
+git checkout jaedon
+```
+
+Check me out!
+
+then to merge, go back to main after you have pushed your changes i.e
+```
+git checkout main
+```
+
+then to merge use:
+
+```
+git merge jaedon
+```
+
+2.The biggest annoying one is how Windows handles .mdx files. 
+
+On Windows, Git and editors often use CRLF by default, which introduces hidden \r characters. Contentlayer expects LF line endings.
+
+So if you change the .mdx files, you will probbaly get a bunch of annoying slug undefined issues that aren't real. 
+
+You need to use prettier to clean the endings, after you have made changes to .mdx files or you will be unfucking a none-issue. 
+
+None of you are even bothering to read this or contributing meaningfully - an issue I can't unfuck.
+
+Anyway, navigate to the projects folder. 
+
+You can do this when you are in root by using:
+
+```
+cd work/projects
+```
+and then
+```
+prettier --write --end-of-line lf "*.mdx"
+```
+or something like either
+
+```
+prettier --write --end-of-line lf "src/app/[locale]/work/projects/en/*.mdx"
+
+```
+from root, or
+
+```
+prettier --write --end-of-line lf "/**/*.mdx"
+```
+and you'll be fine. 
+
+This cleans the files for these endings and you should get an output something like:
+
+```
+C:\Users\jaedo\Desktop\Repositories\magic-portfolio\src\app\[locale]\work\projects\en>prettier --write --end-of-line lf "*.mdx"
+fpo-deanery-optimiser.mdx 287ms
+nottingham-trent-investment-society.mdx 5ms
+save-reality-knife-crime.mdx 36ms
+small-modular-reactors.mdx 6ms
+tailored-swift.mdx 53ms
+
+```
+
 **1. Clone the repository**
 ```
-git clone https://github.com/once-ui-system/magic-portfolio.git
+git clone https://github.com/jaedmunt/magic-portfolio.git
 ```
 
 **2. Install dependencies**
@@ -32,51 +121,3 @@ src/app/resources/content (or content-i18n for localization)
 Add a new .mdx file to src/app/[locale]/blog/posts or src/app/[locale]/work/projects
 ```
 
-# **Features**
-
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
-
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
-
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
-
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
-
-## **Localization (NEW)**
-- Magic Portfolio now supports localization with the next-intl library
-- See more info in resources/config.js
-
-# **Authors**
-
-Connect with us on Threads or LinkedIn.
-
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-
-Localization added by [François Hernandez](https://github.com/francoishernandez)
-
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=https%3A%2F%2Fonce-ui.com%2Fimages%2Ftemplates%2Fmagic-portfolio%2Fcover.jpg)
