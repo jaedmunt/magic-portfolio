@@ -13,7 +13,7 @@ export default function NotFound() {
             <Heading
                 marginBottom="l"
                 variant="display-strong-xs">
-                Page Not Found
+                Computer says nooooo.
             </Heading>
             <Text
                 onBackground="neutral-weak">
