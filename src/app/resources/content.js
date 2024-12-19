@@ -87,7 +87,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>I am a soon-to-be economics graduate and Analyst Intern at Spartech Ventures, a YAS Investments fund where I source MENA's most innovative startups and support founders and ideas shaping the region and the world.</>
+        description: <>I'm Jaedon, Vice President of Partnerships at ChipHub and Analyst at Spartech Ventures, a YAS Investments fund where I source MENAs most innovative startups. We support founders and ideas shaping the region and the world.</>
     },
     work: {
         display: true, // set to false to hide this section
