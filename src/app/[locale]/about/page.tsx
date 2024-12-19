@@ -44,7 +44,7 @@ export default function About(
 ) {
     unstable_setRequestLocale(locale);
     const t = useTranslations();
-    const {person, about, social } = renderContent(t);
+    const { person, about, social } = renderContent(t);
     const structure = [
         { 
             title: about.intro.title,
@@ -66,7 +66,7 @@ export default function About(
             display: about.technical.display,
             items: about.technical.skills.map(skill => skill.title)
         },
-    ]
+    ];
     return (
         <Flex
             fillWidth maxWidth="m"

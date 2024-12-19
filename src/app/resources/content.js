@@ -94,6 +94,17 @@ const about = {
         title: 'Professional Experience',
         experiences: [
             {
+                company: 'ChipHub',
+                timeframe: 'Oct 2024 - Present',
+                role: 'Vice-President of Partnerships',
+                achievements: [
+                    <>Led development of a new part search and comparison/benchmarking feature requested by Apple procurement directors and engineers, leveraging AI and search.</>,
+                    <>Developed the website and marketing materials targeting OEMs, CMs, JDMs et al, to drive sales and partnerships for our agentic AI-driven procurement solution.</>,
+                    <>Developed and co-delivered investor/sales decks/presentations with the CEO.</>
+                ],
+                images: []
+                },
+            {
                 company: 'Century Global Partners',
                 timeframe: 'June 2024 - Present',
                 role: 'Chief Technology Officer',
