@@ -88,7 +88,7 @@ export function formatDate(date: string, includeRelative = false) {
         formattedDate = 'Today';
     }
 
-    const fullDate = targetDate.toLocaleString('en-us', {
+    const fullDate = targetDate.toLocaleString('en-gb', {
         month: 'long',
         day: 'numeric',
         year: 'numeric',
