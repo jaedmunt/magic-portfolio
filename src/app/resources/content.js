@@ -98,7 +98,7 @@ const about = {
                 timeframe: 'Oct 2024 - Present',
                 role: 'Vice-President of Partnerships',
                 achievements: [
-                    <>Led development of a new part search and comparison/benchmarking feature requested by Apple procurement directors and engineers, leveraging AI and search.</>,
+                    <>Led development of a feature requested by procurement directors and engineers of two leading global OEMs</>,
                     <>Developed the website and marketing materials targeting OEMs, CMs, JDMs et al, to drive sales and partnerships for our agentic AI-driven procurement solution.</>,
                     <>Developed and co-delivered investor/sales decks/presentations with the CEO.</>
                 ],
