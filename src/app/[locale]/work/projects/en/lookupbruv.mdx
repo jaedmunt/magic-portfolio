@@ -1,0 +1,47 @@
+---
+title: "Look Up Bruv — UK Northern Lights Alert System (lookupbruv.co.uk)"
+publishedAt: "2025-03-09"
+summary: "A simple website that alerts UK users when the Northern Lights are visible, using real-time aurora monitoring and email notifications."
+images:
+    - "/images/projects/lookupbruv/cover.png"
+
+team:
+    - avatar: "/images/avatar.jpg"
+---
+# Look Up Bruv: Never Miss the Northern Lights Again
+
+[lookupbruv.co.uk](https://lookupbruv.co.uk)
+
+## The Inspiration
+
+It happened again. I opened my phone to see stunning photos of the Northern Lights visible across the UK the night before. "FFS, I missed it again,". Now I shoudl prefface that there are alerts systems for this, but why not adapt them to host on a beautiful website which matches the allure of the 
+
+And that's exactly what I built.
+
+## What It Does
+
+Look Up Bruv monitors the KP index and geomagnetic activity in real-time. When conditions favor aurora visibility in the UK, it sends alerts directly to your email so you can get outside and look up at the right time.
+
+![Northern Lights](/images/projects/lookupbruv/cover.jpg)
+
+## My Learning Journey
+
+Building this project was a great side project to try out some modern developer tools - Resend (dev emails) and Neon (postgres database hosting). 
+
+The standout experience was getting my hands dirty with Postgres via Neon. Working with self-setup DBs is a little painful, having to dockerise, set up a server, access and open ports etc. It's a lot of networking which takes away from the core build time so a serverless SQL setup completely changed my perspective on what' possible in a short time frame (setuip was about 20 minutes total). Instead of worrying about infrastructure, I could focus on creating efficient queries and setting up alert triggers based on KP index thresholds. The best part? It's also dirt cheap for small projects so quick to launch without burning a hole in my pocket or needing to add a paywall. 
+
+Email notifications were the other critical piece of the puzzle. I used resend opnce before for another project but never on a custom domain. Now when aurora conditions look promising, users get timely email alerts from time-to.lookupbruv.co.uk (I guess I think I'm funny). 
+
+## Features That Make It Work
+
+The heart of Look Up Bruv is its real-time aurora monitoring. It constantly tracks geomagnetic activity using data from [AuroraWatch UK](https://aurorawatch.lancs.ac.uk/) (thank you!), but what makes it special is how it only sends notifications when aurora visibility is likely in your specific region - no false alarms.
+
+When you visit the site, you'll immediately see the current KP index and aurora status. I designed it to be glanceable - you quickly check if tonight might be the night. And since most of us aren't sitting at computers when we get the alert that it's time to look up, making everything mobile-friendly was non-negotiable.
+
+## Under the Hood
+
+For the technically curious, I built Look Up Bruv on Next.js and Next.js API routes managing the backend logic. Vercel hosts everything through their serverless functions, while Postgres (via Neon - also serverless) stores user data and settings. Resend handles all the email delivery magic through webhooks. 
+
+The UI came together using Once UI components, which gave me a clean, responsive interface that adapts to whatever device you're using. This is the same UI as my personal website. All the aurora data comes directly from AuroraWatch UK (run by Lancaster University) and Aurora Reach for accurate predictions.
+
+All in all it was nice to build something solely for myself but to share it in case anyone else had the same issue (ultimately trying to get more out of life and miss fewer opportunities for it to be bright and colourful).

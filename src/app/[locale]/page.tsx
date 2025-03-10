@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, SmartImage } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -51,7 +51,7 @@ export default function Home(
 	const { home, about, person, newsletter } = renderContent(t);
 	return (
 		<Flex
-			maxWidth="m" fillWidth gap="xl"
+			maxWidth="m" fillWidth gap="l"
 			direction="column" alignItems="center">
 			<script
 				type="application/ld+json"
@@ -78,10 +78,10 @@ export default function Home(
 			<Flex
 				fillWidth
 				direction="column"
-				paddingY="l" gap="m">
+				paddingY="l" gap="xs">
 					<Flex
 						direction="column"
-						fillWidth maxWidth="s" gap="m">
+						fillWidth maxWidth="s" gap="xs">
 						<RevealFx translateY="4">
 							<Heading
 								wrap="balance"
@@ -97,7 +97,7 @@ export default function Home(
 								{home.subline}
 							</Text>
 						</RevealFx>
-						<RevealFx translateY="12" delay={0.4}>
+						<RevealFx translateY="m" delay={0.4}>
 							<Button
 								data-border="rounded"
 								href={`/${locale}/about`}
@@ -117,7 +117,36 @@ export default function Home(
 								</Flex>
 							</Button>
 						</RevealFx>
+						{('display' in about.technical ? about.technical.display : true) && (
+						<RevealFx translateY="8" delay={0.8}>
+							<Flex fillWidth direction="column" paddingY="xs" gap="m">
+								<Flex
+									direction="row"
+									wrap={false}
+									fillWidth gap="xl">
+									{about.technical.skills
+										.filter(skill => skill.title !== "Certifications")
+										.filter(skill => skill.title !== "Languages")
+										.map((skill, index) => (
+										<Flex
+											key={`${skill}-${index}`}
+											direction="column"
+											paddingRight="xs"
+											gap="0">
+											<Text
+												variant="body-default-s"
+												onBackground="neutral-weak">
+												{skill.description}
+											</Text>
+										</Flex>
+									))}
+								</Flex>
+							</Flex>
+						</RevealFx>
+					)}
+						
 					</Flex>
+					
 				
 			</Flex>
 			<Flex
@@ -134,6 +163,9 @@ export default function Home(
 			<RevealFx translateY="16" delay={0.6}>
 				<Projects range={[1,1]} locale={locale}/>
 			</RevealFx>
+			
+			
+			
 			{routes['/blog'] && (
 				<Flex fillWidth paddingX="20">
 					<Posts range={[1,2]} columns="2" locale={locale}/>

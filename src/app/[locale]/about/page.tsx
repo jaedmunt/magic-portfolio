@@ -63,7 +63,7 @@ export default function About(
         },
         { 
             title: about.technical.title,
-            display: about.technical.display,
+            display: 'display' in about.technical ? about.technical.display : true,
             items: about.technical.skills.map(skill => skill.title)
         },
     ];
@@ -322,7 +322,7 @@ export default function About(
                         </>
                     )}
 
-                    { about.technical.display && (
+                    { ('display' in about.technical ? about.technical.display : true) && (
                         <>
                             <Heading
                                 as="h2"

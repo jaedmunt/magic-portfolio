@@ -171,56 +171,79 @@ const about = {
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
-        title: 'Technical Skills & Certifications',
-        skills: [
-            {
-            title: 'Languages',
-            description: <>English <InlineCode style={{ color: 'gold' }}>Native</InlineCode><br/>German <InlineCode style={{ color: 'green' }}>Professional Working</InlineCode><br/>Afrikaans <InlineCode style={{ color: 'orange' }}>Limited Working</InlineCode></>,
-            images: []
-            },
-            {
-            title: 'Software/Platforms',
-            description: <>
-                <InlineCode style={{ color: 'cyan' }}>Python</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>ReactJS</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>VSCode</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>Git</InlineCode> <br/> 
-                <InlineCode style={{ color: 'cyan' }}>Docker</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>AWS</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>Gitpod</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>Streamlit</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>Jupyter</InlineCode> <br/> 
-                <InlineCode style={{ color: 'cyan' }}>MongoDB</InlineCode>  
-                <InlineCode style={{ color: 'cyan' }}>APIs</InlineCode> <br/> 
-                <InlineCode style={{ color: 'orange' }}>MS Office Suite</InlineCode> 
-                <InlineCode style={{ color: 'orange' }}>Excel</InlineCode>  
-                <InlineCode style={{ color: 'orange' }}>Minitab</InlineCode>  
-                <InlineCode style={{ color: 'orange' }}>Eviews</InlineCode> <br/> 
-                <InlineCode style={{ color: 'green' }}>Notion</InlineCode>  
-                <InlineCode style={{ color: 'green' }}>Monday</InlineCode>  
-                <InlineCode style={{ color: 'green' }}>Canva</InlineCode>  
-                <InlineCode style={{ color: 'green' }}>CRM systems</InlineCode>
-            </>,
-            images: []
-            },
-            {
-            title: 'Certifications',
-            description: <>
+         // set to false to hide this section
+            title: 'Technical Skills & Certifications',
+            skills: [
+                {
+                title: 'Languages',
+                description: <>English <InlineCode style={{ color: 'gold' }}>Native</InlineCode><br/>German <InlineCode style={{ color: 'green' }}>Professional Working</InlineCode><br/>Afrikaans <InlineCode style={{ color: 'orange' }}>Limited Working</InlineCode></>,
+                images: []
+                },
+                {
+                title: 'Softwares/Platforms',
+                description: <>
+                        <Link href="https://www.python.org/"><InlineCode style={{ color: 'cyan' }}>Python</InlineCode></Link>  
+                        <Link href="https://golang.org/"><InlineCode style={{ color: 'cyan' }}>Golang</InlineCode></Link>
+                        <Link href="https://reactjs.org/"><InlineCode style={{ color: 'cyan' }}>ReactJS</InlineCode></Link>  
+                        <Link href="https://nextjs.org/"><InlineCode style={{ color: 'cyan' }}>NextJS</InlineCode></Link>
+                        <Link href="https://remix.run/"><InlineCode style={{ color: 'cyan' }}>RemixJS</InlineCode></Link>
+                        <Link href="https://hydrogen.shopify.dev/"><InlineCode style={{ color: 'cyan' }}>Hydrogen</InlineCode></Link>
+                        <Link href="https://www.linux.org/"><InlineCode style={{ color: 'cyan' }}>Linux</InlineCode></Link>    
+                        <Link href="https://code.visualstudio.com/"><InlineCode style={{ color: 'cyan' }}>VSCode</InlineCode></Link> 
+                        <Link href="https://learn.microsoft.com/en-us/windows/wsl/"><InlineCode style={{ color: 'cyan' }}>WSL</InlineCode></Link>
+                        <Link href="https://vercel.com/"><InlineCode style={{ color: 'cyan' }}>Vercel</InlineCode></Link>  
+                        <br />
+                        <Link href="https://resend.com/"><InlineCode style={{ color: 'cyan' }}>Resend</InlineCode></Link>
+                        <Link href="https://www.mailgun.com/"><InlineCode style={{ color: 'cyan' }}>Mailgun</InlineCode></Link> 
+                        <Link href="https://www.digitalocean.com/"><InlineCode style={{ color: 'cyan' }}>Digital Ocean</InlineCode></Link>   
+                        <Link href="https://www.anaconda.com/"><InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode></Link>  
+                        <Link href="https://git-scm.com/"><InlineCode style={{ color: 'cyan' }}>Git</InlineCode></Link> <br/> 
+                        <Link href="https://hub.docker.com/"><InlineCode style={{ color: 'cyan' }}>DockerHub</InlineCode></Link>
+                        <Link href="https://www.docker.com/"><InlineCode style={{ color: 'cyan' }}>Docker</InlineCode></Link>
+                        <Link href="https://learn.microsoft.com/en-us/copilot-studio/"><InlineCode style={{ color: 'cyan' }}>Azure Copilot Studio</InlineCode></Link>
+                        <Link href="https://aws.amazon.com/s3/"><InlineCode style={{ color: 'cyan' }}>AWS S3</InlineCode></Link> 
+                        <br /> 
+                        <Link href="https://aws.amazon.com/ec2/"><InlineCode style={{ color: 'cyan' }}>AWS EC2</InlineCode></Link>  
+                        <Link href="https://www.gitpod.io/"><InlineCode style={{ color: 'cyan' }}>Gitpod</InlineCode></Link>  
+                        <Link href="https://streamlit.io/"><InlineCode style={{ color: 'cyan' }}>Streamlit</InlineCode></Link>  
+                        <Link href="https://jupyter.org/"><InlineCode style={{ color: 'cyan' }}>Jupyter</InlineCode></Link> <br/>
+                        <Link href="https://colab.research.google.com/"><InlineCode style={{ color: 'cyan' }}>Google Colab</InlineCode></Link>  
+                        <Link href="https://pandas.pydata.org/"><InlineCode style={{ color: 'cyan' }}>Pandas</InlineCode></Link> 
+                        <Link href="https://pola.rs/"><InlineCode style={{ color: 'cyan' }}>Polars</InlineCode></Link>
+                        <Link href="https://numpy.org/"><InlineCode style={{ color: 'cyan' }}>Numpy</InlineCode></Link>  
+                        <Link href="https://scipy.org/"><InlineCode style={{ color: 'cyan' }}>Scipy</InlineCode></Link>
+                        <Link href="https://www.mongodb.com/"><InlineCode style={{ color: 'cyan' }}>MongoDB</InlineCode></Link>  
+                        <Link href="https://www.postman.com/"><InlineCode style={{ color: 'cyan' }}>Postman</InlineCode></Link> <br/> 
+                        <Link href="https://elevenlabs.io/"><InlineCode style={{ color: 'cyan' }}>Elevenlabs</InlineCode></Link> 
+                        <Link href="https://www.microsoft.com/microsoft-365"><InlineCode style={{ color: 'orange' }}>MS Office Suite</InlineCode></Link> 
+                        <Link href="https://www.microsoft.com/microsoft-365/excel"><InlineCode style={{ color: 'orange' }}>Excel</InlineCode></Link>  
+                        <Link href="https://www.minitab.com/"><InlineCode style={{ color: 'orange' }}>Minitab</InlineCode></Link>  
+                        <Link href="https://www.eviews.com/"><InlineCode style={{ color: 'orange' }}>Eviews</InlineCode></Link> <br/> 
+                        <Link href="https://www.notion.so/"><InlineCode style={{ color: 'green' }}>Notion</InlineCode></Link>
+                        <Link href="https://medium.com/"><InlineCode style={{ color: 'green' }}>Medium</InlineCode></Link> 
+                        <Link href="https://www.atlassian.com/software/jira"><InlineCode style={{ color: 'green' }}>Jira</InlineCode></Link>   
+                        <Link href="https://monday.com/"><InlineCode style={{ color: 'green' }}>Monday</InlineCode></Link>  
+                        <Link href="https://www.canva.com/"><InlineCode style={{ color: 'green' }}>Canva</InlineCode></Link>  
+                        <InlineCode style={{ color: 'green' }}>CRM systems</InlineCode>
+                </>,
+                images: []
+                },
+                {
+                title: 'Certifications',
+                description: <>
                 Bloomberg - Bloomberg Market Concepts<br/><a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
                 Newton Venture Program - Newton Foundations <a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
                 Coursera (Imperial College London) – Mathematics for Machine Learning <br/> 
                 Wall Street prep – Accounting, LBO, DCF financial modelling.<br/> 
                 
                 FreeCodeCamp – Solidity and Smart Contracts, Blockchain
-            </>,
-            images: []
-            }
-        ]
-        },
-        extracurricular: {
-        display: true, // set to false to hide this section
+                </>,
+                images: []
+                }
+            ]
+            },
+            extracurricular: {
+            display: true, // set to false to hide this section
         title: 'Extracurricular Activities',
         activities: [
             {

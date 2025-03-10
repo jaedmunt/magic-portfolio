@@ -14,7 +14,13 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
     images: {
-        domains: ['jaedmuntonwebsite.s3.us-east-1.amazonaws.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'jaedmuntonwebsite.s3.us-east-1.amazonaws.com',
+                pathname: '/**'
+            }
+        ]
     },
 };
 export default withNextIntl(withMDX(nextConfig));
