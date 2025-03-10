@@ -198,6 +198,7 @@ const about = {
                         <Link href="https://www.digitalocean.com/"><InlineCode style={{ color: 'cyan' }}>Digital Ocean</InlineCode></Link>   
                         <Link href="https://www.anaconda.com/"><InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode></Link>  
                         <Link href="https://git-scm.com/"><InlineCode style={{ color: 'cyan' }}>Git</InlineCode></Link> <br/> 
+                        <Link href="https://remix.run/"><InlineCode style={{ color: 'cyan' }}>RemixJS</InlineCode></Link>
                         <Link href="https://hub.docker.com/"><InlineCode style={{ color: 'cyan' }}>DockerHub</InlineCode></Link>
                         <Link href="https://www.docker.com/"><InlineCode style={{ color: 'cyan' }}>Docker</InlineCode></Link>
                         <Link href="https://learn.microsoft.com/en-us/copilot-studio/"><InlineCode style={{ color: 'cyan' }}>Azure Copilot Studio</InlineCode></Link>
