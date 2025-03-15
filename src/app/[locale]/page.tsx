@@ -122,7 +122,7 @@ export default function Home(
 							<Flex fillWidth direction="column" paddingY="xs" gap="m">
 								<Flex
 									direction="row"
-									wrap={true}
+									wrap={true}  // Changed to true to enable wrapping on mobile
 									fillWidth gap="xl">
 									{about.technical.skills
 										.filter(skill => skill.title !== "Certifications")
@@ -132,10 +132,14 @@ export default function Home(
 											key={`${skill}-${index}`}
 											direction="column"
 											paddingRight="xs"
-											gap="0">
+											paddingBottom="xs"
+											gap="0"
+											style={{ maxWidth: '100%', flex: '1 1 auto' }}>
 											<Text
 												variant="body-default-s"
-												onBackground="neutral-weak">
+												onBackground="neutral-weak"
+												wrap="pretty"
+												style={{ wordBreak: "break-word" }}>
 												{skill.description}
 											</Text>
 										</Flex>
