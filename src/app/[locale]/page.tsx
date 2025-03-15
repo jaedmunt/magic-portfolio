@@ -122,7 +122,7 @@ export default function Home(
 							<Flex fillWidth direction="column" paddingY="xs" gap="m">
 								<Flex
 									direction="row"
-									wrap={false}
+									wrap={true}
 									fillWidth gap="xl">
 									{about.technical.skills
 										.filter(skill => skill.title !== "Certifications")
