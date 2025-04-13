@@ -98,9 +98,10 @@ const about = {
                 timeframe: 'Oct 2024 - Present',
                 role: 'Vice-President of Partnerships',
                 achievements: [
-                    <>Led development of a feature requested by procurement directors and engineers of two leading global OEMs</>,
+                    <>Led development of a search feature requested by procurement directors and engineers of two leading global OEMs.</>,
                     <>Developed the website and marketing materials targeting OEMs, CMs, JDMs et al, to drive sales and partnerships for our agentic AI-driven procurement solution.</>,
-                    <>Developed and co-delivered investor/sales decks/presentations with the CEO.</>
+                    <>Developed and co-delivered investor/sales decks/presentations with the CEO for $1M seed round.</>,
+                    <>Represented ChipHub at Nvidia GTC 2025 as a member of the NVIDIA Inception Founders Program.</>
                 ],
                 images: []
                 },
