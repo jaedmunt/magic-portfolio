@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import { Flex, Background } from '@/once-ui/components'
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from '@/app/resources'
+import Terminal from '@/components/Terminal';
 
 import { Inter } from 'next/font/google'
 import { Source_Code_Pro } from 'next/font/google';
@@ -133,6 +134,7 @@ export default async function RootLayout({
 						</Flex>
 					</Flex>
 					<Footer/>
+					<Terminal />
 				</Flex>
 			</Flex>
 		</NextIntlClientProvider>
