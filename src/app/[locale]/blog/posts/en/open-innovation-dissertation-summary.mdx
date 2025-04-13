@@ -1,0 +1,190 @@
+---
+title: "A Detailed Summary of my Dissertation: How does open innovation transform innovation measurement in the technology sector?"
+publishedAt: "2025-04-13"
+summary: "A comprehensive overview of my research on how open innovation redefines the frameworks and metrics used to measure technological innovation."
+---
+
+**Module Title**: Research Project  
+**Title of Coursework**: *How does open innovation transform innovation measurement in the technology sector?*  
+**Word Count**: 4275 
+
+Below is a series of excerpts nd summaries of several parts of my dissertation. Enjoy! (I hope)
+
+Open innovation has become a ubiquitous term in the technology sector, championing a shift away from the closed, proprietary R&D pipelines that once dominated corporate strategy. Rather than solely relying on internal expertise and intellectual property, open innovation emphasizes active collaboration with external partners—be they universities, suppliers, or even competitors. While this approach has clearly propelled technological advancement, it also challenges our usual ways of *measuring* that advancement. Do the traditional metrics—like patent counts, R&D intensity, and product launches—truly reflect the full breadth of collaborative innovation activities? My dissertation seeks to explore that question head-on: **How does open innovation transform innovation measurement in the technology sector?**
+
+
+## The Central Research Question
+
+> **RQ**: *How does open innovation reshape the way we track and quantify innovation outcomes in tech?*
+
+This question arose from a gap in the current literature: although numerous studies highlight the successes of open innovation, relatively little has been said about how this new paradigm impacts **innovation metrics**. The field remains wedded to conventional yardsticks like patent filings—even as multi-firm collaborations and knowledge-sharing intensify.
+
+### Objectives & Hypotheses
+
+1. **Objective 1**  
+   Assess the *causal relationship* between firms’ participation in open innovation networks and their performance (e.g., turnover, growth, patent activity).
+
+   - **Hypothesis 1**: Firms with a higher degree of collaboration intensity—where "intensity" refers to the diversity and depth of external partnerships—will show superior innovation outcomes compared to those with lower or no collaborative engagement.
+
+2. **Objective 2**  
+   Investigate the **statistical link** between open innovation participation and tangible performance metrics, seeking evidence of causality.
+
+   - **Hypothesis 2**: After controlling for firm size, sector, and other confounding variables, firms practicing open innovation will demonstrate measurable, positive differences in innovation outcomes (or “outputs”) compared to their non-participating peers.
+
+---
+
+## Literature Review
+
+### 1. Evolving Perspectives on Open Innovation
+
+**Chesbrough (2012)** defines open innovation as a framework that facilitates bi-directional flows of knowledge—both inbound (e.g., incorporating external R&D) and outbound (e.g., licensing or spinning off technologies). This model stands in stark contrast to the older, closed innovation concept, where a company’s internal R&D was seen as the singular engine of new products and services.
+
+Researchers like **Rangus et al. (2017)** have shown that open innovation can accelerate internal processes and also pave the way for new market opportunities. However, these benefits hinge critically on a firm’s ability to *absorb* external knowledge, often called **absorptive capacity**.
+
+### 2. Network Structures in Innovation Ecosystems
+
+**Meeus et al. (2008)** highlight that a firm’s position within a collaborative network—its centrality—can significantly affect its creative outputs. Highly central firms often enjoy easier access to diverse forms of knowledge, but may also face complexity in coordination. Meanwhile, **Leiponen and Helfat (2011)** underscore how decentralized R&D efforts can foster more “imitative” innovations but aren’t as effective for truly novel, “new-to-market” breakthroughs.
+
+Taken together, these studies suggest that open innovation is not merely about “being collaborative” in a vacuum; it’s also about *how* and *where* a firm sits in the broader network, and *what type* of innovation it aims to produce.
+
+### 3. Measuring Innovation in Collaborative Settings
+
+Despite the recognized value of open innovation, **measurement** remains a weak point. Most industry metrics (e.g., patent counts, R&D budgets, number of new product launches) fail to account for the nuanced, shared, and sometimes intangible nature of collaborative discovery. **Hartley et al. (2013)** argue that multi-actor engagement across public, private, and non-profit sectors leads to a richer ecosystem—one that conventional metrics can barely capture.
+
+The question, therefore, isn’t just whether open innovation is effective, but whether we might need *new or adapted metrics*—like network centrality or collaborative intensity—that better mirror the realities of modern R&D ecosystems.
+
+---
+
+## Methodological Overview
+
+### 1. Multi-Stage Research Design
+
+My dissertation employed a **mixed-method approach**, integrating both econometric techniques (specifically, a **Difference-in-Differences (DiD)** model) and **Social Network Analysis (SNA)**. The broad flow was:
+
+1. **Data Collection & Preprocessing**  
+   - Gathered firm-level patent data (including co-applications) from the UK Intellectual Property Office (UKIPO).  
+   - Merged it with financial and organizational metrics from the FAME (Orbis) database for UK-based entities.  
+   - Supplemented this with aggregated insights from the UK Innovation Survey (UKIS) to contextualize collaboration levels.
+
+2. **Econometric Analysis**  
+   - Constructed a DiD framework to isolate the causal impact of “open innovation treatment” on firm performance (turnover, growth, etc.).  
+   - Treated group: Firms that transitioned from zero collaborative patents to at least one co-patent (indicating open innovation).  
+   - Control group: Firms that exhibited no co-patenting over the study period.
+
+3. **Social Network Analysis**  
+   - Visualised the network of co-patenting entities to see the shape and intensity of collaborative relationships.  
+   - Explored potential new metrics (like network centrality scores) that might better capture the collaborative phenomenon.
+
+### 2. Difference-in-Differences (DiD) Deep Dive
+
+Using DiD allowed me to examine how firms in the “treated” group fared before and after they began collaborating, controlling for concurrent macroeconomic factors and firm-specific traits. The model’s simplified form:
+
+**Outcome(i,t) = α + γi(Firm FE) + λt(Year FE) + β[ Post(i,t) × Treated(i) ] + X(i,t)Γ + ε(i,t)**
+
+
+- **Post(i,t)** = 1 if firm _i_ is in or after its first year of collaboration.  
+- **Treated(i)** = 1 if firm _i_ ever collaborates (i.e., has co-patented).  
+- **X(i,t)** = Control variables, including firm size, sector, location, etc.
+
+### 3. Social Network Analysis (SNA)
+
+For **SNA**, I constructed a graph where:
+- **Nodes** represent entities (firms or individuals) listed on patent applications.  
+- **Edges** indicate a co-patenting event, weighted by how many collaborators were involved (“collaborative intensity”).
+
+Software tools like **Gephi**, **NetworkX**, and **Matplotlib** enabled me to visualize and experiment with different layout algorithms (force-directed, etc.). This step primarily aimed to reveal patterns—like clusters of high-intensity collaboration—and to test the viability of using metrics such as “degree centrality” or “betweenness centrality” as alternative measures of innovation activity.
+
+---
+
+## Data Collection & Preprocessing
+
+### 1. Primary Sources
+
+- **UKIPO Patent Data**:  
+  Included publication numbers, filing dates, IPC codes, and applicant names. A collaborative patent was identified when a patent record contained **multiple** applicant names.
+
+- **FAME (Orbis) Firm-Level Data**:  
+  Provided organizational financials (turnover, profit margin, number of employees, etc.). Matched with UKIPO data via partial text matching on firm names. Some data unavoidably dropped due to mismatches or incomplete records.
+
+- **UK Innovation Survey (UKIS)**:  
+  Biannual surveys capturing internal R&D spend, new product introductions, and external collaboration activities. Due to confidentiality, only aggregated or partially masked data was accessible.
+
+### 2. Time Window Selection
+
+The final dataset focuses on the period **2009–2018**, with some expansions to 2006–2024 for extended context. This allows sufficient “before and after” coverage of a firm’s transition into (or out of) collaborative patenting, while acknowledging the data snapshot limitations.
+
+### 3. Data Caveats & Cleaning
+
+- **Firm-Level Access**:  
+  UKIS data at the individual firm level was restricted, limiting direct merges with the patent dataset. Aggregated or partial data thus demanded more creativity in combining sources.
+
+- **Patent Snapshots**:  
+  Patent records from UKIPO included “earliest filing date” but might not perfectly align with real R&D project timelines, potentially creating lag or lead biases.
+
+- **Collaboration Intensity Metric**:  
+  Used a basic measure (`n - 1`) where `n` is the number of co-applicants on a patent. This approach lacks nuance in capturing hierarchical or reciprocal relationships among partners, but it’s feasible and reproducible across large datasets.
+
+---
+
+## Key Findings
+
+### 1. Econometric (DiD) Outcomes
+
+Despite the strong theoretical support for open innovation as a performance booster, my DiD analysis *did not find a robust causal link* between the presence of co-patenting (as an open innovation indicator) and **annual turnover** once firm size, sector, and other controls were factored in. The interaction term (`[ Post(i,t) × Treated(i) ]`) was not statistically significant at conventional levels.  
+
+- **Possible Interpretation**:  
+  - Turnover, as a single metric, might not be sensitive enough to capture the nuanced benefits of collaboration—especially if those benefits manifest in *qualitative* ways (e.g., knowledge spillovers) rather than immediate revenue boosts.  
+  - Open innovation might enhance *long-term growth* or *innovation depth* more than short-term revenue.
+
+### 2. Social Network Insights
+
+Visualizing the patent networks demonstrated the **sheer scale** of collaboration among firms, individuals, and research institutions. Even a small portion of the dataset displayed enormous complexity, making a clear pattern elusive without advanced filtering techniques. However, it was evident that:
+
+- Certain **“hub” entities** engaged in significantly more co-patenting, potentially indicating a leadership role in innovation within their domain.  
+- The majority of nodes had few links, suggesting many entities may dip in and out of collaborative efforts or only do so sporadically.
+
+While these patterns reaffirm that open innovation is widely practiced, they also highlight the difficulty of capturing its essence through a single measure.
+
+### 3. Toward a Refined Measurement Approach
+
+The project tentatively suggests that **network-centric metrics** (e.g., betweenness centrality, density measures) could add substantial insight into how open innovation functions—and which configurations deliver the most impactful results. However, real-world adoption of such measures faces challenges, including data availability, standardization, and the interpretive complexity of advanced metrics.
+
+---
+
+## Discussion & Implications
+
+1. **Rethinking “Success” Metrics**  
+   The near-exclusive reliance on patents as a barometer of R&D success may mask the realities of *collective* innovation. A co-patent is only one type of collaboration indicator—partnerships often yield intangible knowledge, quick prototypes, or spin-offs that never see formal IP filing.
+
+2. **Policy & Investment Focus**  
+   For policymakers, incentivizing open innovation calls for new structures that reward *collaborative outputs*—not just singular inventorship. For venture capital (VC) and corporate investors, embracing new measurement frameworks could uncover undervalued organizations leading in synergy and cross-pollination, rather than short-term revenue alone.
+
+3. **Practical Challenges**  
+   Measuring collaborative intensity or network centrality is not trivial. It demands comprehensive, standardized data sharing, which many firms are reluctant to commit to. Achieving reproducibility (a core goal of my methodology) remains contingent on open data standards and increased transparency in the private sector.
+
+---
+
+## Limitations & Future Research
+
+1. **Data Gaps**:  
+   - The unavailability of certain firm-level data (due to confidentiality) prevented a fully robust integration between UKIS and patent records.  
+   - FAME coverage skews toward medium-to-large firms, possibly overlooking the contributions of smaller players or individual innovators.
+
+2. **Temporal Lags**:  
+   R&D and patent processes span multiple years, so “snapshot” data might miss crucial lead/lag effects. Future research could employ dynamic panel models or repeated measures to capture innovation lifecycles more precisely.
+
+3. **Granularity**:  
+   “Collaborative Intensity” is a blunt metric. Distinguishing active, reciprocal collaborations from nominal co-listings would refine our view of open innovation’s true impact.
+
+4. **Alternative Metrics**:  
+   Beyond patent-based measures, the rising importance of **software, intangible assets**, and **trade secrets** suggests open innovation occurs in many forms that may leave no direct digital footprint. Qualitative or survey-based approaches might be necessary to capture these collaborations effectively.
+
+---
+
+## Summary
+
+My dissertation highlights the complexity of measuring **open innovation** in a world where boundaries between firms are steadily dissolving. Conventional metrics (e.g., patent counts, R&D intensity) remain valuable, but they often underrepresent the collective, networked dynamic that open innovation fosters. While my Difference-in-Differences analysis could not definitively link co-patenting to immediate gains in turnover, the Social Network Analysis portion suggests there is a vast collaborative landscape waiting to be more fully understood.
+
+**Key Takeaway**: To better grasp the *full* value of open innovation, we need fresh frameworks that integrate network analysis, multi-year econometric evaluations, and robust data-sharing practices. By doing so, we’ll not only gain a clearer picture of innovation success, but also ensure that our measurement systems keep pace with the realities of collaborative, global R&D. 
+
+---
