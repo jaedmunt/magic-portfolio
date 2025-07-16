@@ -15,164 +15,9 @@ const Terminal = () => {
   const [commands, setCommands] = useState<Command[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [theme, setTheme] = useState('default');
-  const [isMatrixActive, setIsMatrixActive] = useState(false);
-  const matrixIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const messageIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef('Jub vf areq favcvat abj. RKN');
-  const messageIndexRef = useRef(0);
-  const messagePositionsRef = useRef<{row: number, col: number}[]>([]);
-  const [cipher, setCipher] = useState('');
 
-  const generateCipher = () => {
-    const cipherText = ``;
-    setCipher(cipherText);
-    return cipherText;
-  };
-
-  const matrixRain = () => {
-    const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const rain = Array(30).fill('').map(() => 
-      Array(100).fill('').map(() => ({
-        char: chars[Math.floor(Math.random() * chars.length)],
-        color: '#00ff00'
-      }))
-    );
-
-    // Add number digit if it's time
-    if (messageIndexRef.current < messageRef.current.length) {
-      // Position digits in a horizontal line starting from the middle
-      const row = 15; // Middle row
-      const startCol = 40; // Start from middle
-      const col = startCol + messageIndexRef.current;
-      
-      messagePositionsRef.current.push({ row, col });
-      
-      // Add all current digits to their positions
-      messagePositionsRef.current.forEach((pos, index) => {
-        if (index <= messageIndexRef.current) {
-          rain[pos.row][pos.col] = {
-            char: messageRef.current[index],
-            color: '#ff00ff'
-          };
-        }
-      });
-      
-      messageIndexRef.current++;
-    } else {
-      // Keep existing digits in place
-      messagePositionsRef.current.forEach((pos, index) => {
-        rain[pos.row][pos.col] = {
-          char: messageRef.current[index],
-          color: '#ff00ff'
-        };
-      });
-    }
-
-    return rain.map(row => 
-      row.map(cell => `<span style="color: ${cell.color}">${cell.char}</span>`).join('')
-    ).join('\n');
-  };
-
-  const startMatrix = () => {
-    if (matrixIntervalRef.current) return;
-    setIsMatrixActive(true);
-    messageIndexRef.current = 0;
-    messagePositionsRef.current = [];
-    
-    // Display cipher in terminal
-    const cipherText = generateCipher();
-    setCommands(prev => [...prev, { command: 'matrix', output: cipherText }]);
-    
-    matrixIntervalRef.current = setInterval(() => {
-      const matrixElement = document.getElementById('matrix-overlay');
-      if (matrixElement) {
-        matrixElement.innerHTML = matrixRain();
-      }
-    }, 100);
-
-    // Reset digits every 30 seconds
-    messageIntervalRef.current = setInterval(() => {
-      messageIndexRef.current = 0;
-      messagePositionsRef.current = [];
-    }, 30000);
-  };
-
-  const stopMatrix = () => {
-    if (matrixIntervalRef.current) {
-      clearInterval(matrixIntervalRef.current);
-      matrixIntervalRef.current = null;
-    }
-    if (messageIntervalRef.current) {
-      clearInterval(messageIntervalRef.current);
-      messageIntervalRef.current = null;
-    }
-    setIsMatrixActive(false);
-  };
-
-  const asciiArt = `
- ---------------------------------------------------                                                                            
-███████╗████████╗ █████╗  ██████╗██╗  ██╗                                                                          
-██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝                                                                          
-███████╗   ██║   ███████║██║     █████╔╝                                                                           
-╚════██║   ██║   ██╔══██║██║     ██╔═██╗                                                                           
-███████║   ██║   ██║  ██║╚██████╗██║  ██╗                                                                          
-╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ 
-██╗      █████╗ ██████╗ 
-██║     ██╔══██╗██╔══██╗
-██║     ███████║██████╔╝
-██║     ██╔══██║██╔══██╗
-███████╗██║  ██║██████╔╝
-╚══════╝╚═╝  ╚═╝╚═════╝ 
- ---------------------------------------------------                                                                          
-                                                                                                                                  
-██╗      ██████╗  ██████╗ ██╗  ██╗                                              
-██║     ██╔═══██╗██╔═══██╗██║ ██╔╝                                            
-██║     ██║   ██║██║   ██║█████╔╝                                              
-██║     ██║   ██║██║   ██║██╔═██╗                                               
-███████╗╚██████╔╝╚██████╔╝██║  ██╗                                              
-╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ 
-██╗   ██╗██████╗
-██║   ██║██╔══██╗ 
-██║   ██║██████╔╝
-██║   ██║██╔═══╝
-╚██████╔╝██║    
- ╚═════╝ ╚═╝ 
-██████╗ ██████╗ ██╗   ██╗██╗   ██╗
-██╔══██╗██╔══██╗██║   ██║██║   ██║
-██████╔╝██████╔╝██║   ██║██║   ██║
-██╔══██╗██╔══██╗██║   ██║╚██╗ ██╔╝
-██████╔╝██║  ██║╚██████╔╝ ╚████╔╝ 
-╚═════╝ ╚═╝  ╚═╝ ╚═════╝   ╚═══╝                                                  
- ---------------------------------------------------                                                                
- ██████╗███████╗███╗   ██╗████████╗  
-██╔════╝██╔════╝████╗  ██║╚══██╔══╝  
-██║     █████╗  ██╔██╗ ██║   ██║     
-██║     ██╔══╝  ██║╚██╗██║   ██║     
-╚██████╗███████╗██║ ╚████║   ██║ 
-
-██╗   ██╗██████╗ ██╗   ██╗
-██║   ██║██╔══██╗╚██╗ ██╔╝
-██║   ██║██████╔╝ ╚████╔╝ 
-██║   ██║██╔══██╗  ╚██╔╝  
-╚██████╔╝██║  ██║   ██║   
-                                                                   
-██████╗ ██╗ █████╗ 
-██╔══██╗██║██╔══██╗
-██║  ██║██║███████║
-██║  ██║██║██╔══██║
-██████╔╝██║██║  ██║
-  
-███╗   ███╗ ██████╗ ███╗   ██╗██████╗ ███████╗
-████╗ ████║██╔═══██╗████╗  ██║██╔══██╗██╔════╝
-██╔████╔██║██║   ██║██╔██╗ ██║██║  ██║███████╗
-██║╚██╔╝██║██║   ██║██║╚██╗██║██║  ██║╚════██║
-██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██████╔╝███████║    
-  `;
-
-
-  // - contact: Send me a message
   const handleCommand = (command: string) => {
     const cmd = command.toLowerCase().trim();
     let output = '';
@@ -184,9 +29,7 @@ const Terminal = () => {
 - cv: Download my CV
 - contact: Send me a message
 - clear: Clear the terminal
-- matrix: Toggle matrix rain effect
 - theme [color]: Change terminal theme (colors: green, blue, purple, red)
-- ascii: Show cool ASCII art
 - links: Open all my social and project links
 - exit: Close the terminal`;
         break;
@@ -201,18 +44,6 @@ const Terminal = () => {
       case 'clear':
         setCommands([]);
         return;
-      case 'matrix':
-        if (isMatrixActive) {
-          stopMatrix();
-          output = 'Matrix rain effect stopped';
-        } else {
-          startMatrix();
-          output = 'Matrix rain effect started';
-        }
-        break;
-      case 'ascii':
-        output = asciiArt;
-        break;
       case 'theme':
         const color = command.split(' ')[1];
         if (['green', 'blue', 'purple', 'red'].includes(color)) {
@@ -234,7 +65,6 @@ const Terminal = () => {
         output = 'Opening all links in new tabs...';
         break;
       case 'exit':
-        stopMatrix();
         setIsOpen(false);
         return;
       default:
@@ -255,7 +85,6 @@ const Terminal = () => {
 
       return () => {
         clearTimeout(timer);
-        stopMatrix();
       };
     }
   }, [isOpen]);
@@ -275,10 +104,6 @@ const Terminal = () => {
       >
         <FaTerminal />
       </button>
-
-      {isMatrixActive && (
-        <div id="matrix-overlay" className={styles.matrixOverlay} />
-      )}
 
       {isOpen && (
         <div className={`${styles.terminal} ${styles[theme]}`} ref={terminalRef}>
