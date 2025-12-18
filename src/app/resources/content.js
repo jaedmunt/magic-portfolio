@@ -64,9 +64,13 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Venture Capital and Technology Professional</>,
-    subline: <>I'm Jaedon, Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: 'cyan' }}>ChipHub</InlineCode></Link> and Analyst at <Link href="https://www.spartechvc.com"><InlineCode style={{ color: 'cyan' }}>Spartech Ventures</InlineCode></Link>, a <Link href="https://www.yasinvest.com"><InlineCode style={{ color: 'cyan' }}>YAS Investments</InlineCode></Link> fund  where I source MENAs most innovative <InlineCode style={{ color: 'gold' }}>startups</InlineCode>. We support<InlineCode style={{ color: 'gold' }}>founders</InlineCode> and <InlineCode style={{ color: 'gold' }}>ideas</InlineCode> shaping the region and the world. <br/>
+    subline: <>I'm Jaedon, an Analyst & Developer at <Link href="https://evvolve.io"><InlineCode style={{ color: 'stone-500' }}>Evvolve & Partners</InlineCode></Link> where I support raises from pre-seed to series C and connect startups with investors. I'm also building a breathing map of the internet,<Link href="https://fluxsearch.io"><InlineCode style={{ color: 'stone-900' }}>Flux Search</InlineCode></Link>, a constantly fresh search engine. 
+    <></> 
     <br/>
-    After hours, I build my own projects.</>
+    <br/>
+    Previously, I was Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: 'stone-500' }}>ChipHub</InlineCode></Link> in the semiconductor industry, and Analyst at <Link href="https://www.yasinvest.com"><InlineCode style={{ color: 'stone-500' }}>Spartech Ventures</InlineCode></Link>, venture fund where I sourced MENA's most innovative startups.<br/>
+    <br/>
+    With 2 years VC experience in MENA and 3 years developing innovative software in the UK and USA, I've developed a global perspective on company building and capital markets.</>
 }
 
 const about = {
@@ -87,54 +91,64 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>I'm Jaedon, Vice President of Partnerships at ChipHub and Analyst at Spartech Ventures, a YAS Investments fund where I source MENAs most innovative startups. We support founders and ideas shaping the region and the world.</>
+        description: <>I'm Jaedon, a multidisciplinary technologist and venture analyst currently at evvolve. I'm also building Flux, a semantic search engine for developers, AI agents & content teams. Previously, I was Vice President of Partnerships at ChipHub and Analyst at Spartech Ventures, a YAS Investments fund where I sourced MENA's most innovative startups.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Professional Experience',
         experiences: [
             {
+                company: 'Flux (fluxsearch.io)',
+                timeframe: 'Jun 2025 - Present',
+                role: 'Founder',
+                achievements: [
+                    <>Building a semantic search engine for developers, AI agents & content teams, offering the freshest results through novel approaches to crawling and indexing.</>
+                ],
+                images: []
+            },
+            {
+                company: 'evvolve',
+                timeframe: 'Present',
+                role: 'Venture Analyst',
+                achievements: [
+                    <>Sourcing investments and conducting due diligence for early-stage technology startups.</>
+                ],
+                images: []
+            },
+            {
                 company: 'ChipHub',
-                timeframe: 'Oct 2024 - Present',
+                timeframe: 'Oct 2024 - May 2025',
                 role: 'Vice-President of Partnerships',
                 achievements: [
-                    <>Led development of a search feature requested by procurement directors and engineers of two leading global OEMs.</>,
-                    <>Developed the website and marketing materials targeting OEMs, CMs, JDMs et al, to drive sales and partnerships for our agentic AI-driven procurement solution.</>,
-                    <>Developed and co-delivered investor/sales decks/presentations with the CEO for $1M seed round.</>,
-                    <>Represented ChipHub at Nvidia GTC 2025 as a member of the NVIDIA Inception Founders Program.</>
-                ],
-                images: []
-                },
-            {
-                company: 'Century Global Partners',
-                timeframe: 'June 2024 - Present',
-                role: 'Chief Technology Officer',
-                achievements: [
-                    <>Cofounded a gemstone brokerage and retail technology firm bringing digital innovation to the retail jewellery sector (a ‘learn-before-you-earn’ project).</>,
-                    <>Formed a partnership with a prominent Antwerp-based direct-to-consumer diamond dealer to expand sales to the UK using a novel go-to-market strategy.</>,
-                    <>Developing a flagship bespoke digital service leveraging computer vision and image-to-3D models with a proprietary pricing algorithm.</>
+                    <>More aptly titled 'founders' associate', responsible for strategising and executing GTM and fundraising, and hiring developers.</>,
+                    <>Pitched to global OEMs including Google, Apple, Meta, Nexperia et al., using SPICED framework and collected feedback and ethnographic insights for the team.</>,
+                    <>Coded dockerised agentic search and comparison tools for datasheets cutting time by ~70% in golang, python, and integrated into nextJS frontend.</>,
+                    <>Developed internal prospecting tools to find ICPs, saving $300 per month (price of next best alternative), and enabling domain-specific outreach.</>,
+                    <>Authored and delivered sales and investment decks and pitches, using excellent written communication, and formed partnerships for our GTM in N. America and Korea.</>
                 ],
                 images: []
             },
             {
-                company: 'YAS Investments (Spartech Ventures)',
-                timeframe: 'Oct 2023 - Present',
-                role: 'Venture Capital Analyst Intern',
+                company: 'YAS Investments (Spartech Ventures Fund II)',
+                timeframe: 'Oct 2023 - May 2025',
+                role: 'Venture Capital Analyst',
                 achievements: [
-                    <>Sourced for MENA-focused Spartech Venture II fund (seed, series A) successor to Spartech I ($100M, tech-enabled, sector agnostic).</>,
-                    <>Created marketing materials for the fund to attract capital during fundraising, focused on UAE and KSA sovereign wealth funds.</>,
-                    <>Outreach to founders seeking £1-2mm ticket sizes, qualifying startups for debt/equity financing, using written communication skills to generate memos.</>
+                    <>Sourced for MENA-focused Spartech Ventures 2nd fund (growth stage, tech-enabled, sector agnostic) maintaining strong relationships with growth stage executives.</>,
+                    <>Outreach to founders seeking $2-5mm ticket sizes (equity) and $10M-$120M (debt), qualifying startups, using written communication skills to generate memos.</>,
+                    <>Conducted market mapping, end-to-end due diligence series B and C rounds (~$80m fintech, ~$65m F&B), and supported DDQ answers for a UAE sovereign wealth fund.</>,
+                    <>Coded a finance sector and stage matching service (all-mini-v6 and BERT) for Hub71 in python and docker, which scrapes web data and matches family office and startups.</>,
+                    <>Created marketing materials, developed the website in NextJS (yasinvest.com) for the fund to attract capital during fundraising, ahead of partnership with Hub71.</>
                 ],
                 images: []
             },
             {
-                company: 'Certie (Oxford-Innovation-backed)',
+                company: 'Certie',
                 timeframe: 'Mar 2023 - Jun 2024',
-                role: 'Product & Development Lead',
+                role: 'Product & Development Lead (Machine Learning)',
                 achievements: [
-                    <>Managed 1 developer as Team lead for an ML platform converting text (like this CV) to a standardised taxonomy using natural language processing.</>,
-                    <>Research/product for Sidetree protocol (ETH) credential product – developing business cases, marketing strategy, decks and pitching to universities.</>,
-                    <>Delegate at London Tech Week (2023) and Gibraltar Finance Ministry (DLT framework author), interviews with Gibraltar Broadcasting Corporation.</>
+                    <>Managed a junior developer as team lead for an ML platform converting text (like this CV) to a standardised taxonomy using NLP – Spacy NER, BERT.</>,
+                    <>Research/product for Sidetree protocol (ETH) credential product – developing business cases, marketing strategy, decks and pitching to university registrars.</>,
+                    <>Delegate at London Tech Week (2023) and Gibraltar Finance Ministry (DLT framework author), interviewed by Gibraltar Broadcasting Corporation.</>
                 ],
                 images: []
             },
@@ -157,9 +171,9 @@ const about = {
         institutions: [
             {
                 name: 'Nottingham Business School',
-                description: <>BA (Hons) Economics | [Sep 2022-present. Completion: Jun 2025]<br/><br/>
-                Research project (dissertation) topic: <br/><br/>
-                <InlineCode style={{ color: 'cyan' }}>How does open innovation impact innovation measurement in technology firms?</InlineCode><br/><br/>
+                description: <>BA (Hons) Economics | [Sep 2022-Dec 2025]<br/><br/>
+                Dissertation: <br/><br/>
+                <InlineCode style={{ color: 'cyan' }}>How does open innovation impact innovation measurement in the technology sector?</InlineCode> (mixed methods difference-in-differences and social network analysis)<br/><br/>
                 Modules:<br/>
                 <InlineCode style={{ color: 'gold' }}>Y1</InlineCode> Principles of Microeconomics, Principles of Macroeconomics, Introduction to Finance for Economists, Quantitative Economics<br/><br/>
                 <InlineCode style={{ color: 'green' }}>Y2</InlineCode> Econometrics I, Applied Professional Development, Environmental and Resource Economics, Economic Evaluation<br/><br/>
@@ -183,16 +197,24 @@ const about = {
                 {
                 title: 'Softwares/Platforms',
                 description: <>
-                        <Link href="https://www.python.org/"><InlineCode style={{ color: 'cyan' }}>Python</InlineCode></Link>  
-                        <Link href="https://golang.org/"><InlineCode style={{ color: 'cyan' }}>Golang</InlineCode></Link>
+                        <Link href="https://www.python.org/"><InlineCode style={{ color: 'red' }}>Python</InlineCode></Link>
+                        <Link href="https://www.rust-lang.org/"><InlineCode style={{ color: 'red' }}>Rust</InlineCode></Link>
+                        <Link href="https://golang.org/"><InlineCode style={{ color: 'red' }}>Golang</InlineCode></Link>
+                        <Link href="https://www.typescriptlang.org/"><InlineCode style={{ color: 'red' }}>TypeScript</InlineCode></Link>
+                        <br />
+                        <Link href="https://www.bun.sh/"><InlineCode style={{ color: 'cyan' }}>Bun</InlineCode></Link>
+                        <Link href="https://www.terraform.io/"><InlineCode style={{ color: 'cyan' }}>Terraform</InlineCode></Link>
+                        <Link href="https://www.docker.com/"><InlineCode style={{ color: 'cyan' }}>Docker</InlineCode></Link>
+                        <Link href="https://k8s.io/"><InlineCode style={{ color: 'cyan' }}>Kubernetes (EKS/Minikube)</InlineCode></Link>
+                        <Link href="https://www.linux.org/"><InlineCode style={{ color: 'cyan' }}>Linux (Arch/Ubuntu)</InlineCode></Link>
+                        <br />
                         <Link href="https://reactjs.org/"><InlineCode style={{ color: 'cyan' }}>ReactJS</InlineCode></Link>  
                         <Link href="https://nextjs.org/"><InlineCode style={{ color: 'cyan' }}>NextJS</InlineCode></Link>
                         <Link href="https://remix.run/"><InlineCode style={{ color: 'cyan' }}>RemixJS</InlineCode></Link>
-                        <Link href="https://hydrogen.shopify.dev/"><InlineCode style={{ color: 'cyan' }}>Hydrogen</InlineCode></Link>
-                        <Link href="https://www.linux.org/"><InlineCode style={{ color: 'cyan' }}>Linux</InlineCode></Link>    
-                        <Link href="https://code.visualstudio.com/"><InlineCode style={{ color: 'cyan' }}>VSCode</InlineCode></Link> 
-                        <Link href="https://learn.microsoft.com/en-us/windows/wsl/"><InlineCode style={{ color: 'cyan' }}>WSL</InlineCode></Link>
-                        <Link href="https://vercel.com/"><InlineCode style={{ color: 'cyan' }}>Vercel</InlineCode></Link>  
+                        <Link href="https://hydrogen.shopify.dev/"><InlineCode style={{ color: 'cyan' }}>Hydrogen</InlineCode></Link>    
+                        <Link href="https://weaviate.io/"><InlineCode style={{ color: 'cyan' }}>Weaviate Vector Database</InlineCode></Link>
+                        <Link href="https://vercel.com/"><InlineCode style={{ color: 'cyan' }}>Vercel</InlineCode></Link>
+                        <Link href="https://supabase.com/"><InlineCode style={{ color: 'cyan' }}>PSQL</InlineCode></Link>
                         <br />
                         <Link href="https://resend.com/"><InlineCode style={{ color: 'cyan' }}>Resend</InlineCode></Link>
                         <Link href="https://www.mailgun.com/"><InlineCode style={{ color: 'cyan' }}>Mailgun</InlineCode></Link> 
@@ -200,33 +222,26 @@ const about = {
                         <Link href="https://www.anaconda.com/"><InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode></Link>  
                         <Link href="https://git-scm.com/"><InlineCode style={{ color: 'cyan' }}>Git</InlineCode></Link> <br/> 
                         <Link href="https://remix.run/"><InlineCode style={{ color: 'cyan' }}>RemixJS</InlineCode></Link>
-                        <Link href="https://hub.docker.com/"><InlineCode style={{ color: 'cyan' }}>DockerHub</InlineCode></Link>
                         <Link href="https://www.docker.com/"><InlineCode style={{ color: 'cyan' }}>Docker</InlineCode></Link>
                         <Link href="https://learn.microsoft.com/en-us/copilot-studio/"><InlineCode style={{ color: 'cyan' }}>Azure Copilot Studio</InlineCode></Link>
-                        <Link href="https://aws.amazon.com/s3/"><InlineCode style={{ color: 'cyan' }}>AWS S3</InlineCode></Link> 
-                        <br /> 
-                        <Link href="https://aws.amazon.com/ec2/"><InlineCode style={{ color: 'cyan' }}>AWS EC2</InlineCode></Link>  
-                        <Link href="https://www.gitpod.io/"><InlineCode style={{ color: 'cyan' }}>Gitpod</InlineCode></Link>  
-                        <Link href="https://streamlit.io/"><InlineCode style={{ color: 'cyan' }}>Streamlit</InlineCode></Link>  
+                        <Link href="https://www.openai.com/"><InlineCode style={{ color: 'cyan' }}>Langchain/Langsmith</InlineCode></Link>
+                        <Link href="https://aws.amazon.com/"><InlineCode style={{ color: 'cyan' }}>AWS</InlineCode></Link> 
+                        <br />
                         <Link href="https://jupyter.org/"><InlineCode style={{ color: 'cyan' }}>Jupyter</InlineCode></Link> <br/>
                         <Link href="https://colab.research.google.com/"><InlineCode style={{ color: 'cyan' }}>Google Colab</InlineCode></Link>  
                         <Link href="https://pandas.pydata.org/"><InlineCode style={{ color: 'cyan' }}>Pandas</InlineCode></Link> 
                         <Link href="https://pola.rs/"><InlineCode style={{ color: 'cyan' }}>Polars</InlineCode></Link>
                         <Link href="https://numpy.org/"><InlineCode style={{ color: 'cyan' }}>Numpy</InlineCode></Link>  
                         <Link href="https://scipy.org/"><InlineCode style={{ color: 'cyan' }}>Scipy</InlineCode></Link>
-                        <Link href="https://www.mongodb.com/"><InlineCode style={{ color: 'cyan' }}>MongoDB</InlineCode></Link>  
                         <Link href="https://www.postman.com/"><InlineCode style={{ color: 'cyan' }}>Postman</InlineCode></Link> <br/> 
-                        <Link href="https://elevenlabs.io/"><InlineCode style={{ color: 'cyan' }}>Elevenlabs</InlineCode></Link> 
-                        <Link href="https://www.microsoft.com/microsoft-365"><InlineCode style={{ color: 'orange' }}>MS Office Suite</InlineCode></Link> 
-                        <Link href="https://www.microsoft.com/microsoft-365/excel"><InlineCode style={{ color: 'orange' }}>Excel</InlineCode></Link>  
                         <Link href="https://www.minitab.com/"><InlineCode style={{ color: 'orange' }}>Minitab</InlineCode></Link>  
                         <Link href="https://www.eviews.com/"><InlineCode style={{ color: 'orange' }}>Eviews</InlineCode></Link> <br/> 
-                        <Link href="https://www.notion.so/"><InlineCode style={{ color: 'green' }}>Notion</InlineCode></Link>
-                        <Link href="https://medium.com/"><InlineCode style={{ color: 'green' }}>Medium</InlineCode></Link> 
                         <Link href="https://www.atlassian.com/software/jira"><InlineCode style={{ color: 'green' }}>Jira</InlineCode></Link>   
                         <Link href="https://monday.com/"><InlineCode style={{ color: 'green' }}>Monday</InlineCode></Link>  
-                        <Link href="https://www.canva.com/"><InlineCode style={{ color: 'green' }}>Canva</InlineCode></Link>  
-                        <InlineCode style={{ color: 'green' }}>CRM systems</InlineCode>
+                        <Link href="https://www.canva.com/"><InlineCode style={{ color: 'green' }}>Canva</InlineCode></Link>
+                        <Link href="https://www.figma.com/"><InlineCode style={{ color: 'green' }}>Figma</InlineCode></Link>  
+                        <Link href="https://www.attio.com/"><InlineCode style={{ color: 'green' }}>Attio</InlineCode></Link>
+                        <Link href="https://www.airtable.com/"><InlineCode style={{ color: 'green' }}>Airtable</InlineCode></Link>
                 </>,
                 images: []
                 },
@@ -250,11 +265,9 @@ const about = {
         activities: [
             {
                 title: 'President | Investment Society',
-                timeframe: 'Jul 2023 - Present',
-                description: <>Launched and grew the society to over 100 active members, leading equity research sessions, competitions, speaker events, and socials.<br/>
-                Commercially aware, organising guest speakers including the UK Minister for Enterprise, Markets, and Small Business, CEO of Wall Street Oasis.<br/>
-                Equities research and trading for the Bloomberg Trading Competition (‘23, ‘24); M&A strategic review for National Investment Banking Competition (’22,’23).<br/>
-                Formed strategic partnerships with the Womens Societies Alliance and Warwick Incubator to expand our offering and promote inclusivity.</>
+                timeframe: 'Jul 2023 - Mar 2025',
+                description: <>Launched and grew the society to 100+ members, hosting guest speakers including the UK Minister for Enterprise, Markets, and Small Business, CEO of Wall Street Oasis.<br/>
+                Equities research and trading for the Bloomberg Trading Competition ('23, '24); M&A strategic review for National Investment Banking Competition ('22,'23).</>
             },
             {
                 title: 'Vice President & Treasurer | Debating Society',
@@ -269,10 +282,8 @@ const about = {
             },
             {
                 title: 'Finance Executive | Enactus UK',
-                timeframe: 'Sep 2024 - Present',
-                description: <>Managed the financial health of Enactus NTU, including revenue analysis, expense tracking, and growth modelling.<br/>
-                Oversaw annual budgeting, bank account management, and financial reporting to the executive team and stakeholders.<br/>
-                Collaborated with the Commercial Director to maximise income generation through grants, sponsorships, and fundraising initiatives.</>
+                timeframe: 'Sep 2024 - May 2025',
+                description: <>Managed society finances and solo-developed a digital app for the 'Save Reality' project tackling youth knife crime.</>
             },
             {
                 title: 'Course Representative - Economics | NTSU',
