@@ -87,7 +87,7 @@ export const Header = () => {
                 )}
             </Flex>
             <Flex
-                background="surface" border="neutral-medium" borderStyle="solid-1" radius="s" shadow="none"
+                background="surface" border="neutral-medium" borderStyle="solid-1" radius="s"
                 padding="4"
                 justifyContent="center">
                 <Flex
