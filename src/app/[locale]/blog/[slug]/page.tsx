@@ -100,10 +100,12 @@ export default function Blog({ params }: BlogParams) {
 						headline: post.metadata.title,
 						datePublished: post.metadata.publishedAt,
 						dateModified: post.metadata.publishedAt,
-						description: post.metadata.summary,
-						image: post.metadata.image
-							? `https://${baseURL}${post.metadata.image}`
-							: `https://${baseURL}/og?title=${post.metadata.title}`,
+					description: post.metadata.summary,
+					image: post.metadata.image
+						? (post.metadata.image.startsWith('http://') || post.metadata.image.startsWith('https://'))
+							? post.metadata.image
+							: `https://${baseURL}${post.metadata.image}`
+						: `https://${baseURL}/og?title=${post.metadata.title}`,
 							url: `https://${baseURL}/${params.locale}/blog/${post.slug}`,
 						author: {
 							'@type': 'Person',
