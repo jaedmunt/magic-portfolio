@@ -1,0 +1,85 @@
+---
+title: "Why My First Venture Capital Matching Model Failed (and What Actually Worked)"
+publishedAt: "2026-02-14"
+summary: "A case study on building a VC matching model: what went wrong, how I fixed it, and lessons learned about pairing models with data."
+---
+
+I am a venture capital analyst and developer. I use technology to pair startups and investors.
+
+The first matcher I built constructed a network graph made of edges and nodes which it then then did a leisurely (until some custom code to take it from CPU to GPU) stroll around it to learn how its nodes (investors and startups) are related.
+
+Frankly, I fell on my face, and then built a really good matcher from what I learnt. Here's what went wrong, how I fixed it, and what I would do better.
+
+I will keep this a relatively short, snappy, and handwritten rumination (minus any proprietary info or implementation — sorry).
+
+I hope that this is a case study on avoiding potholes, and also encouragement to anybody scoping out or building something career critical. It is a little unnerving when it doesn't go how you expect, but it's not over until you stop trying!
+
+**TL;DR:**
+
+- Models and data are like wine and cheese. Pair them well. Pinot grigio and stilton are not a good match.
+- I think graphs are good for matching, when you model the results of a behaviour and abstract away the complex whys underneath.
+- Take extreme care. It is not easy to reliably model complex case-by-case human decision making at the micro level with surface level features.
+- Investors are picky. There's no 5 second rule. Exclusion is probably more important than similarity. Assume there's always an elephant in the room and do your best to spot the fella.
+
+## What went wrong
+
+The matches were bad…they were not relevant. Bad fit, unless you squint.
+
+In a nutshell, the features used in the model were wrong for the task and oversimplifed investor decision making.
+
+I did eventually build a better matcher by understanding both the problem, available models, and data better. Holistic from day 1 is ambitious but it's worth pausing and sensechecking. Taking time to think and understand more about the nature of the entities I was connecting helped a lot.
+
+Surely venture investment is network driven. Investors co-invest. They invest in similar themes. Funds publish sector mandates. Geographies overlap.
+
+So I built a homogenous (side note — should have been heterogenous!) network graph where the edges were high level features such as geography and sector and the nodes were investors and startups.
+
+I still maintain that graphs are great and incredibly useful, but my failure was thinking that I could hard encode the features that make an investment decision in a few high level edges.
+
+I mean if I like berries and you've got blueberries, we'd be a good match?
+
+Node — you. Node: me. Edge: likes blueberries. Sweet.
+
+Node A — Investor. Node B: Startup. Edge: build/invests in ClimateTech. Pass (why?).
+
+Scale that up to a few more features and surely the ones with the most overlap would be good? Pfft no.
+
+In reality, early stage investors are picky, decisive and selective. There are always a few almost contradictory forces at play behind the way they invest. They invest in X sector but prioritise ideas built for markets that don't exist yet. They say national or global, but really cluster around one ecosystem.
+
+So what I got was invests in X, based in roughly the same location, same stage, same sector, same ticket size. And yet when you actually looked at the pairing, it was obviously wrong.
+
+## What worked?
+
+What worked was shifting away from structural similarity toward preference understanding. Thankfully it only(?!) took about 6 weeks to remember I have a degree in economics, the study of decision making and preferences, and that these things might be somewhat important.
+
+The core information about an investors preference is their thesis, which was a good source to approximate what a good match is.
+
+So instead of hard coding features, I used text-based feature extraction to encode representations of complex theses, that could capture most of the the nuance and nitpickiness, thus treating investor thesis as primary signal. Then applying some hard filters for dirt (absolute exclusions).
+
+Hard exclusions are important because even if the rest is almost perfect.
+
+One reason to say no is enough and can trump a lot of good reasons to say yes. Investors who have significant responsibility, capital and ample deal flow, simply don't have to abide by the 5 second rule, and they are well accustomed to saying no.
+
+## If I wasn't wrong, when would I be right?
+
+For reflection, I will consider when a graph would make good sense, because the matches I generated was somewhere between bringing a pool noodle to a pasta bar and a thermometer to determine the heat of a chilli.
+
+There's definitely some relatedness there, but it's not right fit. Noodles and pasta are conceptually adjacent, but the composite meaning doesn't fit the task. Nuance and depth, encoded in a thesis but not in hard filters/edges was more important.
+
+I think my graph model was actually great (really), but better suited for prediction using outcomes. When I chose my filters, I was basically saying 'I will match X and Y because these features are what I think are important for your decision making'.
+
+What I should have done is used edges that encoded the resultant behaviour of their decision process, to abstract away the why.
+
+Think of 5 friends in your friend group, unless you use Arch btw. I'm going to assume some things about your friend group. Feel free to customise these to your liking.
+
+- A and B repeatedly attend the same hackathons together.
+- B and C train at the same gym classes every week.
+- A, B, and D regularly end up at the same group dinners.
+- E almost never shows up to any of these shared activities.
+
+You don't model why — work schedules, interests, personalities, proximity, or coincidence. The shared activities implicitly encode those hidden variables. The graph captures outcomes, not motivations, and that abstraction is exactly what makes it predictive.
+
+If you scrolled Instagram reels for any substantial amount of time today, you might feel the same kind of intuition. Meta doesn't parse and organise all the complex features behind the videos on its platform. It says that because your mates liked this video and you liked another one that they they liked, you'll probably also like this.
+
+My view is network modelling outcomes acts like a quantisation of the more diverse and complex reasons for the connections that lay underneath. You still need a dirt filter, but graphs still have that birds of a feather flock together/vote with your feet energy that can be hugely powerful at prediction.
+
+I think I ended up doing the bigger task, but look forward to revisiting how graphs can be used for matching with some different data.
