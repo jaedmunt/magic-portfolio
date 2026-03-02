@@ -68,7 +68,8 @@ export const Header = () => {
     }
 
     const t = useTranslations();
-    const { person, home, about, blog, work, gallery } = renderContent(t);
+    const { person, home, about, blog, work } = renderContent(t);
+    // gallery removed from destructuring since route is commented out
 
     return (
         <Flex style={{height: 'fit-content'}}
@@ -125,14 +126,15 @@ export const Header = () => {
                             <Flex paddingX="2" hide="s">{blog.label}</Flex>
                         </ToggleButton>
                     )}
-                    { routes['/gallery'] && (
+                    {/* Gallery route commented out for streamlined performance-focused design */}
+                    {/* { routes['/gallery'] && (
                         <ToggleButton
                             prefixIcon="gallery"
                             href={`/${params?.locale}/gallery`}
                             selected={pathname.startsWith('/gallery')}>
                             <Flex paddingX="2" hide="s">{gallery.label}</Flex>
                         </ToggleButton>
-                    )}
+                    )} */}
                 </Flex>
             </Flex>
             <Flex
