@@ -103,7 +103,7 @@ const about = {
             {
                 company: 'Evvolve & Partners',
                 timeframe: '2024',
-                role: 'Venture Analyst / Systems Builder',
+                role: 'Venture Analyst / Software Engineer',
                 achievements: [
                   <>Sourced and evaluated early-stage technology startups (AI, data, enterprise software), owning screening, diligence, and investment memos.</>,
                   <>Built and operated a startup–investor matching engine and research pipeline used in live client workflows, covering ingestion, enrichment, ranking, reranking, and match-reason generation.</>,
