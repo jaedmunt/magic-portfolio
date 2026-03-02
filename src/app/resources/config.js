@@ -14,7 +14,7 @@ const routes = {
     '/about':   true,
     '/work':    true,
     '/blog':    true,
-    '/gallery': true,
+    // '/gallery': true,  // Commented out for streamlined performance-focused design
 }
 
 // Enable password protection on selected routes
@@ -24,21 +24,21 @@ const protectedRoutes = {
 }
 
 const effects = {
-    gradient: true,
-    dots:     true,
+    gradient: false,  // Disabled for performance-focused design
+    dots:     false,   // Disabled for performance-focused design
     lines:    false,
 }
 
 const style = {
     theme:       'dark',         // dark | light
-    neutral:     'slate',         // sand | gray | slate
-    brand:       'blue',         // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    accent:      'magenta',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    neutral:     'gray',         // sand | gray | slate - using gray for monochrome theme
+    brand:       'gray',         // Monochrome: gray | slate (was: blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan)
+    accent:      'slate',       // Monochrome: slate for subtle flashes (was: magenta)
     solid:       'color',     // color | contrast
-    solidStyle:  'plastic',         // flat | plastic
+    solidStyle:  'flat',         // flat | plastic - flat for professional resume-like look
     border:      'conservative',      // rounded | playful | conservative
     surface:     'filled',  // filled | translucent
-    transition:  'macro'           // all | micro | macro
+    transition:  'micro'           // all | micro | macro - micro for faster, more professional feel
 }
 
 

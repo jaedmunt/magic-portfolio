@@ -64,13 +64,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Venture Capital and Technology Professional</>,
-    subline: <>I'm Jaedon, an Analyst & Developer at <Link href="https://evvolve.io"><InlineCode style={{ color: 'stone-500' }}>Evvolve & Partners</InlineCode></Link> where I support raises from pre-seed to series C and connect startups with investors. I'm also building a breathing map of the internet,<Link href="https://fluxsearch.io"><InlineCode style={{ color: 'stone-900' }}>Flux Search</InlineCode></Link>, a constantly fresh search engine. 
-    <></> 
-    <br/>
-    <br/>
-    Previously, I was Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: 'stone-500' }}>ChipHub</InlineCode></Link> in the semiconductor industry, and Analyst at <Link href="https://www.yasinvest.com"><InlineCode style={{ color: 'stone-500' }}>Spartech Ventures</InlineCode></Link>, venture fund where I sourced MENA's most innovative startups.<br/>
-    <br/>
-    With 2 years VC experience in MENA and 3 years developing innovative software in the UK and USA, I've developed a global perspective on company building and capital markets.</>
+    subline: <>Multidisciplinary technologist and venture analyst with 2 years sourcing investments in MENA and 3 years operating early-stage software SaaS startups across the UK and USA. Currently Analyst at <Link href="https://evvolve.io"><InlineCode style={{ color: '#b2b2b2' }}>evvolve</InlineCode></Link> and Founder of <Link href="https://fluxsearch.io"><InlineCode style={{ color: '#d2d2d2' }}>Flux</InlineCode></Link>, a semantic search engine for developers and AI agents.<br/><br/>Previously Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: '#b2b2b2' }}>ChipHub</InlineCode></Link> and Analyst at <Link href="https://www.yasinvest.com"><InlineCode style={{ color: '#b2b2b2' }}>Spartech Ventures</InlineCode></Link>. Experienced across finance, product, engineering, and sales with a global perspective on innovation and company building.</>
 }
 
 const about = {
@@ -173,14 +167,14 @@ const about = {
                 name: 'Nottingham Business School',
                 description: <>BA (Hons) Economics | [Sep 2022-Dec 2025]<br/><br/>
                 Dissertation: <br/><br/>
-                <InlineCode style={{ color: 'cyan' }}>How does open innovation impact innovation measurement in the technology sector?</InlineCode> (mixed methods difference-in-differences and social network analysis)<br/><br/>
+                <InlineCode style={{ color: '#d2d2d2' }}>How does open innovation impact innovation measurement in the technology sector?</InlineCode> (mixed methods difference-in-differences and social network analysis)<br/><br/>
                 Modules:<br/>
-                <InlineCode style={{ color: 'gold' }}>Y1</InlineCode> Principles of Microeconomics, Principles of Macroeconomics, Introduction to Finance for Economists, Quantitative Economics<br/><br/>
-                <InlineCode style={{ color: 'green' }}>Y2</InlineCode> Econometrics I, Applied Professional Development, Environmental and Resource Economics, Economic Evaluation<br/><br/>
-                <InlineCode style={{ color: 'gold' }}>Y3</InlineCode> Research Project, Investment Portfolio Management, Macroeconomics Issues and Policy, Developing Professional Impact, The World Economy<br/><br/>
+                <InlineCode style={{ color: '#d2d2d2' }}>Y1</InlineCode> Principles of Microeconomics, Principles of Macroeconomics, Introduction to Finance for Economists, Quantitative Economics<br/><br/>
+                <InlineCode style={{ color: '#b2b2b2' }}>Y2</InlineCode> Econometrics I, Applied Professional Development, Environmental and Resource Economics, Economic Evaluation<br/><br/>
+                <InlineCode style={{ color: '#d2d2d2' }}>Y3</InlineCode> Research Project, Investment Portfolio Management, Macroeconomics Issues and Policy, Developing Professional Impact, The World Economy<br/><br/>
                 Awards:<br/>
                 
-                Dean’s Award (Dec ’23)<br/> Sustainability in Practice <InlineCode style={{ color: 'gold' }}>Gold</InlineCode><br/> Student Group Executive <InlineCode style={{ color: 'gold' }}>Gold</InlineCode></>
+                Dean’s Award (Dec ’23)<br/> Sustainability in Practice <InlineCode style={{ color: '#d2d2d2' }}>Gold</InlineCode><br/> Student Group Executive <InlineCode style={{ color: '#d2d2d2' }}>Gold</InlineCode></>
             }
             
         ]
@@ -191,57 +185,57 @@ const about = {
             skills: [
                 {
                 title: 'Languages',
-                description: <>English <InlineCode style={{ color: 'gold' }}>Native</InlineCode><br/>German <InlineCode style={{ color: 'green' }}>Professional Working</InlineCode><br/>Afrikaans <InlineCode style={{ color: 'orange' }}>Limited Working</InlineCode></>,
+                description: <>English <InlineCode style={{ color: '#d2d2d2' }}>Native</InlineCode><br/>German <InlineCode style={{ color: '#b2b2b2' }}>Professional Working</InlineCode><br/>Afrikaans <InlineCode style={{ color: '#959595' }}>Limited Working</InlineCode></>,
                 images: []
                 },
                 {
                 title: 'Softwares/Platforms',
                 description: <>
-                        <Link href="https://www.python.org/"><InlineCode style={{ color: 'red' }}>Python</InlineCode></Link>
-                        <Link href="https://www.rust-lang.org/"><InlineCode style={{ color: 'red' }}>Rust</InlineCode></Link>
-                        <Link href="https://golang.org/"><InlineCode style={{ color: 'red' }}>Golang</InlineCode></Link>
-                        <Link href="https://www.typescriptlang.org/"><InlineCode style={{ color: 'red' }}>TypeScript</InlineCode></Link>
+                        <Link href="https://www.python.org/"><InlineCode style={{ color: '#d2d2d2' }}>Python</InlineCode></Link>
+                        <Link href="https://www.rust-lang.org/"><InlineCode style={{ color: '#d2d2d2' }}>Rust</InlineCode></Link>
+                        <Link href="https://golang.org/"><InlineCode style={{ color: '#d2d2d2' }}>Golang</InlineCode></Link>
+                        <Link href="https://www.typescriptlang.org/"><InlineCode style={{ color: '#d2d2d2' }}>TypeScript</InlineCode></Link>
                         <br />
-                        <Link href="https://www.bun.sh/"><InlineCode style={{ color: 'cyan' }}>Bun</InlineCode></Link>
-                        <Link href="https://www.terraform.io/"><InlineCode style={{ color: 'cyan' }}>Terraform</InlineCode></Link>
-                        <Link href="https://www.docker.com/"><InlineCode style={{ color: 'cyan' }}>Docker</InlineCode></Link>
-                        <Link href="https://k8s.io/"><InlineCode style={{ color: 'cyan' }}>Kubernetes (EKS/Minikube)</InlineCode></Link>
-                        <Link href="https://www.linux.org/"><InlineCode style={{ color: 'cyan' }}>Linux (Arch/Ubuntu)</InlineCode></Link>
+                        <Link href="https://www.bun.sh/"><InlineCode style={{ color: '#b2b2b2' }}>Bun</InlineCode></Link>
+                        <Link href="https://www.terraform.io/"><InlineCode style={{ color: '#b2b2b2' }}>Terraform</InlineCode></Link>
+                        <Link href="https://www.docker.com/"><InlineCode style={{ color: '#b2b2b2' }}>Docker</InlineCode></Link>
+                        <Link href="https://k8s.io/"><InlineCode style={{ color: '#b2b2b2' }}>Kubernetes (EKS/Minikube)</InlineCode></Link>
+                        <Link href="https://www.linux.org/"><InlineCode style={{ color: '#b2b2b2' }}>Linux (Arch/Ubuntu)</InlineCode></Link>
                         <br />
-                        <Link href="https://reactjs.org/"><InlineCode style={{ color: 'cyan' }}>ReactJS</InlineCode></Link>  
-                        <Link href="https://nextjs.org/"><InlineCode style={{ color: 'cyan' }}>NextJS</InlineCode></Link>
-                        <Link href="https://remix.run/"><InlineCode style={{ color: 'cyan' }}>RemixJS</InlineCode></Link>
-                        <Link href="https://hydrogen.shopify.dev/"><InlineCode style={{ color: 'cyan' }}>Hydrogen</InlineCode></Link>    
-                        <Link href="https://weaviate.io/"><InlineCode style={{ color: 'cyan' }}>Weaviate Vector Database</InlineCode></Link>
-                        <Link href="https://vercel.com/"><InlineCode style={{ color: 'cyan' }}>Vercel</InlineCode></Link>
-                        <Link href="https://supabase.com/"><InlineCode style={{ color: 'cyan' }}>PSQL</InlineCode></Link>
+                        <Link href="https://reactjs.org/"><InlineCode style={{ color: '#b2b2b2' }}>ReactJS</InlineCode></Link>  
+                        <Link href="https://nextjs.org/"><InlineCode style={{ color: '#b2b2b2' }}>NextJS</InlineCode></Link>
+                        <Link href="https://remix.run/"><InlineCode style={{ color: '#b2b2b2' }}>RemixJS</InlineCode></Link>
+                        <Link href="https://hydrogen.shopify.dev/"><InlineCode style={{ color: '#b2b2b2' }}>Hydrogen</InlineCode></Link>    
+                        <Link href="https://weaviate.io/"><InlineCode style={{ color: '#b2b2b2' }}>Weaviate Vector Database</InlineCode></Link>
+                        <Link href="https://vercel.com/"><InlineCode style={{ color: '#b2b2b2' }}>Vercel</InlineCode></Link>
+                        <Link href="https://supabase.com/"><InlineCode style={{ color: '#b2b2b2' }}>PSQL</InlineCode></Link>
                         <br />
-                        <Link href="https://resend.com/"><InlineCode style={{ color: 'cyan' }}>Resend</InlineCode></Link>
-                        <Link href="https://www.mailgun.com/"><InlineCode style={{ color: 'cyan' }}>Mailgun</InlineCode></Link> 
-                        <Link href="https://www.digitalocean.com/"><InlineCode style={{ color: 'cyan' }}>Digital Ocean</InlineCode></Link>   
-                        <Link href="https://www.anaconda.com/"><InlineCode style={{ color: 'cyan' }}>Anaconda</InlineCode></Link>  
-                        <Link href="https://git-scm.com/"><InlineCode style={{ color: 'cyan' }}>Git</InlineCode></Link> <br/> 
-                        <Link href="https://remix.run/"><InlineCode style={{ color: 'cyan' }}>RemixJS</InlineCode></Link>
-                        <Link href="https://www.docker.com/"><InlineCode style={{ color: 'cyan' }}>Docker</InlineCode></Link>
-                        <Link href="https://learn.microsoft.com/en-us/copilot-studio/"><InlineCode style={{ color: 'cyan' }}>Azure Copilot Studio</InlineCode></Link>
-                        <Link href="https://www.openai.com/"><InlineCode style={{ color: 'cyan' }}>Langchain/Langsmith</InlineCode></Link>
-                        <Link href="https://aws.amazon.com/"><InlineCode style={{ color: 'cyan' }}>AWS</InlineCode></Link> 
+                        <Link href="https://resend.com/"><InlineCode style={{ color: '#b2b2b2' }}>Resend</InlineCode></Link>
+                        <Link href="https://www.mailgun.com/"><InlineCode style={{ color: '#b2b2b2' }}>Mailgun</InlineCode></Link> 
+                        <Link href="https://www.digitalocean.com/"><InlineCode style={{ color: '#b2b2b2' }}>Digital Ocean</InlineCode></Link>   
+                        <Link href="https://www.anaconda.com/"><InlineCode style={{ color: '#b2b2b2' }}>Anaconda</InlineCode></Link>  
+                        <Link href="https://git-scm.com/"><InlineCode style={{ color: '#b2b2b2' }}>Git</InlineCode></Link> <br/> 
+                        <Link href="https://remix.run/"><InlineCode style={{ color: '#b2b2b2' }}>RemixJS</InlineCode></Link>
+                        <Link href="https://www.docker.com/"><InlineCode style={{ color: '#b2b2b2' }}>Docker</InlineCode></Link>
+                        <Link href="https://learn.microsoft.com/en-us/copilot-studio/"><InlineCode style={{ color: '#b2b2b2' }}>Azure Copilot Studio</InlineCode></Link>
+                        <Link href="https://www.openai.com/"><InlineCode style={{ color: '#b2b2b2' }}>Langchain/Langsmith</InlineCode></Link>
+                        <Link href="https://aws.amazon.com/"><InlineCode style={{ color: '#b2b2b2' }}>AWS</InlineCode></Link> 
                         <br />
-                        <Link href="https://jupyter.org/"><InlineCode style={{ color: 'cyan' }}>Jupyter</InlineCode></Link> <br/>
-                        <Link href="https://colab.research.google.com/"><InlineCode style={{ color: 'cyan' }}>Google Colab</InlineCode></Link>  
-                        <Link href="https://pandas.pydata.org/"><InlineCode style={{ color: 'cyan' }}>Pandas</InlineCode></Link> 
-                        <Link href="https://pola.rs/"><InlineCode style={{ color: 'cyan' }}>Polars</InlineCode></Link>
-                        <Link href="https://numpy.org/"><InlineCode style={{ color: 'cyan' }}>Numpy</InlineCode></Link>  
-                        <Link href="https://scipy.org/"><InlineCode style={{ color: 'cyan' }}>Scipy</InlineCode></Link>
-                        <Link href="https://www.postman.com/"><InlineCode style={{ color: 'cyan' }}>Postman</InlineCode></Link> <br/> 
-                        <Link href="https://www.minitab.com/"><InlineCode style={{ color: 'orange' }}>Minitab</InlineCode></Link>  
-                        <Link href="https://www.eviews.com/"><InlineCode style={{ color: 'orange' }}>Eviews</InlineCode></Link> <br/> 
-                        <Link href="https://www.atlassian.com/software/jira"><InlineCode style={{ color: 'green' }}>Jira</InlineCode></Link>   
-                        <Link href="https://monday.com/"><InlineCode style={{ color: 'green' }}>Monday</InlineCode></Link>  
-                        <Link href="https://www.canva.com/"><InlineCode style={{ color: 'green' }}>Canva</InlineCode></Link>
-                        <Link href="https://www.figma.com/"><InlineCode style={{ color: 'green' }}>Figma</InlineCode></Link>  
-                        <Link href="https://www.attio.com/"><InlineCode style={{ color: 'green' }}>Attio</InlineCode></Link>
-                        <Link href="https://www.airtable.com/"><InlineCode style={{ color: 'green' }}>Airtable</InlineCode></Link>
+                        <Link href="https://jupyter.org/"><InlineCode style={{ color: '#b2b2b2' }}>Jupyter</InlineCode></Link> <br/>
+                        <Link href="https://colab.research.google.com/"><InlineCode style={{ color: '#b2b2b2' }}>Google Colab</InlineCode></Link>  
+                        <Link href="https://pandas.pydata.org/"><InlineCode style={{ color: '#b2b2b2' }}>Pandas</InlineCode></Link> 
+                        <Link href="https://pola.rs/"><InlineCode style={{ color: '#b2b2b2' }}>Polars</InlineCode></Link>
+                        <Link href="https://numpy.org/"><InlineCode style={{ color: '#b2b2b2' }}>Numpy</InlineCode></Link>  
+                        <Link href="https://scipy.org/"><InlineCode style={{ color: '#b2b2b2' }}>Scipy</InlineCode></Link>
+                        <Link href="https://www.postman.com/"><InlineCode style={{ color: '#b2b2b2' }}>Postman</InlineCode></Link> <br/> 
+                        <Link href="https://www.minitab.com/"><InlineCode style={{ color: '#959595' }}>Minitab</InlineCode></Link>  
+                        <Link href="https://www.eviews.com/"><InlineCode style={{ color: '#959595' }}>Eviews</InlineCode></Link> <br/> 
+                        <Link href="https://www.atlassian.com/software/jira"><InlineCode style={{ color: '#b2b2b2' }}>Jira</InlineCode></Link>   
+                        <Link href="https://monday.com/"><InlineCode style={{ color: '#b2b2b2' }}>Monday</InlineCode></Link>  
+                        <Link href="https://www.canva.com/"><InlineCode style={{ color: '#b2b2b2' }}>Canva</InlineCode></Link>
+                        <Link href="https://www.figma.com/"><InlineCode style={{ color: '#b2b2b2' }}>Figma</InlineCode></Link>  
+                        <Link href="https://www.attio.com/"><InlineCode style={{ color: '#b2b2b2' }}>Attio</InlineCode></Link>
+                        <Link href="https://www.airtable.com/"><InlineCode style={{ color: '#b2b2b2' }}>Airtable</InlineCode></Link>
                 </>,
                 images: []
                 },
@@ -315,14 +309,16 @@ const work = {
     // All projects will be listed on the /home and /work routes
 }
 
-const cdn = 'https://jaedmuntonwebsite.s3.us-east-1.amazonaws.com/gallery/';
+// Commented out gallery for streamlined performance-focused design
+// const cdn = 'https://jaedmuntonwebsite.s3.us-east-1.amazonaws.com/gallery/';
 
 const gallery = {
     label: 'Gallery',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
-    images: [
+    images: []  // Commented out for performance - original images array below
+    /* images: [
         { 
             src: `${cdn}img-30.jpg`,
             alt: `image`,
@@ -529,6 +525,7 @@ const gallery = {
             orientation: `vertical`
         }
     ]
+    */
 }
 
 export { person, social, newsletter, home, about, blog, work, gallery };

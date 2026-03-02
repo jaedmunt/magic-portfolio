@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, SmartImage } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, SmartImage } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -51,8 +51,8 @@ export default function Home(
 	const { home, about, person, newsletter } = renderContent(t);
 	return (
 		<Flex
-			maxWidth="m" fillWidth gap="l"
-			direction="column" alignItems="center">
+			maxWidth="m" fillWidth gap="m"
+			direction="column" alignItems="flex-start">
 			<script
 				type="application/ld+json"
 				suppressHydrationWarning
@@ -78,95 +78,85 @@ export default function Home(
 			<Flex
 				fillWidth
 				direction="column"
-				paddingY="l" gap="xs">
+				paddingY="m" gap="m">
 					<Flex
 						direction="column"
-						fillWidth maxWidth="s" gap="xs">
-						<RevealFx translateY="4">
-							<Heading
-								wrap="balance"
-								variant="display-strong-l">
-								{home.headline}
-							</Heading>
-						</RevealFx>
-						<RevealFx translateY="8" delay={0.2}>
-							<Text
-								wrap="balance"
-								onBackground="neutral-weak"
-								variant="body-default-l">
-								{home.subline}
-							</Text>
-						</RevealFx>
-						<RevealFx translateY="m" delay={0.4}>
-							<Button
-								data-border="rounded"
-								href={`/${locale}/about`}
-								variant="tertiary"
-								suffixIcon="chevronRight"
-								size="m">
-								<Flex
-									gap="8"
-									alignItems="center">
-									{about.avatar.display && (
-										<Avatar
-											style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
-											src={person.avatar}
-											size="m"/>
-										)}
-										{t("about.title")}
-								</Flex>
-							</Button>
-						</RevealFx>
-						{('display' in about.technical ? about.technical.display : true) && (
-						<RevealFx translateY="8" delay={0.8}>
-							<Flex fillWidth direction="column" paddingY="xs" gap="m">
-								<Flex
-									direction="row"
-									wrap={true}  // Changed to true to enable wrapping on mobile
-									fillWidth gap="xl">
-									{about.technical.skills
-										.filter(skill => skill.title !== "Certifications")
-										.filter(skill => skill.title !== "Languages")
-										.map((skill, index) => (
-										<Flex
-											key={`${skill}-${index}`}
-											direction="column"
-											paddingRight="xs"
-											paddingBottom="xs"
-											gap="0"
-											style={{ maxWidth: '100%', flex: '1 1 auto' }}>
-											<Text
-												variant="body-default-s"
-												onBackground="neutral-weak"
-												wrap="pretty"
-												style={{ wordBreak: "break-word" }}>
-												{skill.description}
-											</Text>
-										</Flex>
-									))}
-								</Flex>
+						fillWidth gap="m"
+						style={{ maxWidth: '100%' }}>
+						<Heading
+							wrap="balance"
+							variant="display-strong-l">
+							{home.headline}
+						</Heading>
+						<Text
+							wrap="balance"
+							onBackground="neutral-weak"
+							variant="body-default-l">
+							{home.subline}
+						</Text>
+						<Button
+							data-border="conservative"
+							href={`/${locale}/about`}
+							variant="tertiary"
+							suffixIcon="chevronRight"
+							size="m">
+							<Flex
+								gap="8"
+								alignItems="center">
+								{about.avatar.display && (
+									<Avatar
+										style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
+										src={person.avatar}
+										size="m"/>
+									)}
+									{t("about.title")}
 							</Flex>
-						</RevealFx>
+						</Button>
+						{('display' in about.technical ? about.technical.display : true) && (
+						<Flex fillWidth direction="column" paddingY="xs" gap="m">
+							<Flex
+								direction="row"
+								wrap={true}  // Changed to true to enable wrapping on mobile
+								fillWidth gap="xl">
+								{about.technical.skills
+									.filter(skill => skill.title !== "Certifications")
+									.filter(skill => skill.title !== "Languages")
+									.map((skill, index) => (
+									<Flex
+										key={`${skill}-${index}`}
+										direction="column"
+										paddingRight="xs"
+										paddingBottom="xs"
+										gap="0"
+										style={{ maxWidth: '100%', flex: '1 1 auto' }}>
+										<Text
+											variant="body-default-s"
+											onBackground="neutral-weak"
+											wrap="pretty"
+											style={{ wordBreak: "break-word" }}>
+											{skill.description}
+										</Text>
+									</Flex>
+								))}
+							</Flex>
+						</Flex>
 					)}
 						
 					</Flex>
 					
 				
 			</Flex>
-			<Flex
+			{/* GitHub Calendar - commented out for cleaner resume-like design */}
+			{/* <Flex
 				fillWidth
 				direction="column"
 				paddingY="l" gap="s"
 				overflowX="hidden">
-				<RevealFx translateY="16" delay={0.6}>
-					<GitHubCalendar 
-						username="jaedmunt">
-					</GitHubCalendar>
-				</RevealFx>
-			</Flex>
-			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]} locale={locale}/>
-			</RevealFx>
+				<GitHubCalendar 
+					username="jaedmunt">
+				</GitHubCalendar>
+			</Flex> */}
+			<Projects range={[1,1]} locale={locale}/>
 			
 			
 			

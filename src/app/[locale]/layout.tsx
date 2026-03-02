@@ -125,10 +125,10 @@ export default async function RootLayout({
 					<Header/>
 					<Flex
 						zIndex={0}
-						fillWidth paddingY="l" paddingX="l"
-						justifyContent="center" flex={1}>
+						fillWidth paddingY="m" paddingX="l"
+						justifyContent="flex-start" flex={1}>
 						<Flex
-							justifyContent="center"
+							justifyContent="flex-start"
 							fillWidth minHeight="0">
 							<RouteGuard>
 								{children}
@@ -137,7 +137,8 @@ export default async function RootLayout({
 						</Flex>
 					</Flex>
 					<Footer/>
-					<Terminal />
+					{/* Terminal component hidden for professional resume-like design */}
+					{/* <Terminal /> */}
 				</Flex>
 			</Flex>
 		</NextIntlClientProvider>
