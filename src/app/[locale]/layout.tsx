@@ -126,9 +126,9 @@ export default async function RootLayout({
 					<Flex
 						zIndex={0}
 						fillWidth paddingY="m" paddingX="l"
-						justifyContent="flex-start" flex={1}>
+						justifyContent="center" flex={1}>
 						<Flex
-							justifyContent="flex-start"
+							justifyContent="center"
 							fillWidth minHeight="0">
 							<RouteGuard>
 								{children}

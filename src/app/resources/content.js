@@ -101,14 +101,61 @@ const about = {
                 images: []
             },
             {
-                company: 'evvolve',
-                timeframe: 'Present',
-                role: 'Venture Analyst',
+                company: 'Evvolve & Partners',
+                timeframe: '2024',
+                role: 'Venture Analyst / Systems Builder',
                 achievements: [
-                    <>Sourcing investments and conducting due diligence for early-stage technology startups.</>
+                  <>Sourced and evaluated early-stage technology startups (AI, data, enterprise software), owning screening, diligence, and investment memos.</>,
+                  <>Built and operated a startup–investor matching engine and research pipeline used in live client workflows, covering ingestion, enrichment, ranking, reranking, and match-reason generation.</>,
+                  <>Designed hybrid retrieval and ranking systems combining keyword search (BM25) and vector search, with optional reranking to improve relevance and reduce analyst time.</>,
+                  <>Implemented robust data pipelines for ingesting large CSV datasets, normalising schemas, deduplicating entities, validating URLs/domains, and enforcing idempotent upserts.</>,
+                  <>Developed LLM-assisted extraction and evaluation workflows for documents and unstructured text, with structured outputs for downstream scoring and CRM integration.</>,
+                  <>Led technical due diligence for product and AI stacks, including architecture review, data/ML pipeline assessment, and reliability/cost tradeoffs for deployment.</>,
+                  <>Worked closely with founders on fundraising materials (narrative, metrics, data room structure), and supported investor targeting and outreach strategy.</>
+                ],
+                skills: [
+                  // Languages
+                  'Go (Golang)',
+                  'Python',
+                  'Rust',
+                  'TypeScript/JavaScript',
+                  'SQL',
+              
+                  // AI / Retrieval
+                  'LLM integration (structured outputs, tool calling, RAG)',
+                  'Vector databases (Weaviate)',
+                  'Hybrid search (BM25 + vector)',
+                  'Embedding pipelines',
+                  'Reranking pipelines',
+                  'Query expansion (HyDE-style)',
+              
+                  // Data Engineering
+                  'ETL/ELT pipelines',
+                  'Schema design and normalization',
+                  'Entity resolution / deduplication',
+                  'Web data enrichment and validation',
+                  'Document parsing and content extraction (OCR, PDF pipelines)',
+              
+                  // Infra / Deployment
+                  'Docker',
+                  'Kubernetes',
+                  'Terraform',
+                  'Linux',
+                  'AWS',
+                  'CI/CD',
+              
+                  // Datastores
+                  'PostgreSQL',
+                  'Supabase (hosted + self-hosted)',
+                  'Redis',
+              
+                  // Product / VC
+                  'Startup sourcing and diligence',
+                  'Technical due diligence',
+                  'Fundraising support and investor targeting'
                 ],
                 images: []
-            },
+              },
             {
                 company: 'ChipHub',
                 timeframe: 'Oct 2024 - May 2025',
