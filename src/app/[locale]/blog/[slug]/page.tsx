@@ -141,12 +141,13 @@ export default function Blog({ params }: BlogParams) {
 					{formatDate(post.metadata.publishedAt)}
 				</Text>
 			</Flex>
-			{post.metadata.image && (
+			{post.metadata.image && typeof post.metadata.image === 'string' && (
 				<SmartImage
 					aspectRatio="16 / 9"
 					radius="m"
 					alt={post.metadata.title}
-					src={post.metadata.image}/>
+					src={post.metadata.image}
+					unoptimized={post.metadata.image.startsWith('http://') || post.metadata.image.startsWith('https://')}/>
 			)}
 			<Flex
 				as="article"

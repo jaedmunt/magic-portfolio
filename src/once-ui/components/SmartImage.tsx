@@ -54,7 +54,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
     }, [isEnlarged]);
 
     const calculateTransform = () => {
-        if (!imageRef.current) return {};
+        if (typeof window === 'undefined' || !imageRef.current) return {};
 
         const rect = imageRef.current.getBoundingClientRect();
         const scaleX = window.innerWidth / rect.width;
