@@ -102,7 +102,7 @@ const about = {
             },
             {
                 company: 'Evvolve & Partners',
-                timeframe: '2024',
+                timeframe: 'Aug 2025 - Present',
                 role: 'Venture Analyst / Software Engineer',
                 achievements: [
                   <>Sourced and evaluated early-stage technology startups (AI, data, enterprise software), owning screening, diligence, and investment memos.</>,
