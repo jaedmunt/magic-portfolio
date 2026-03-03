@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/components/mdx'
 import { formatDate, getPosts } from '@/app/utils'
-import { Avatar, Button, Flex, Heading, Text } from '@/once-ui/components'
+import { Avatar, Button, Flex, Heading, SmartImage, Text } from '@/once-ui/components'
 
 import { baseURL, renderContent } from '@/app/resources'
 import { unstable_setRequestLocale } from 'next-intl/server'
@@ -47,7 +47,9 @@ export function generateMetadata({ params: { slug, locale } }: BlogParams) {
 		image,
 	} = post.metadata;
 	let ogImage = image
-		? `https://${baseURL}${image}`
+		? (image.startsWith('http://') || image.startsWith('https://'))
+			? image
+			: `https://${baseURL}${image}`
 		: `https://${baseURL}/og?title=${title}`;
 
 	return {
@@ -139,6 +141,13 @@ export default function Blog({ params }: BlogParams) {
 					{formatDate(post.metadata.publishedAt)}
 				</Text>
 			</Flex>
+			{post.metadata.image && (
+				<SmartImage
+					aspectRatio="16 / 9"
+					radius="m"
+					alt={post.metadata.title}
+					src={post.metadata.image}/>
+			)}
 			<Flex
 				as="article"
 				direction="column"

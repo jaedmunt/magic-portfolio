@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, SmartImage } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, SmartImage, IconButton } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -48,7 +48,7 @@ export default function Home(
 ) {
 	unstable_setRequestLocale(locale);
 	const t = useTranslations();
-	const { home, about, person, newsletter } = renderContent(t);
+	const { home, about, person, newsletter, social } = renderContent(t);
 	return (
 		<Flex
 			maxWidth="m" fillWidth gap="m"
@@ -94,24 +94,39 @@ export default function Home(
 							variant="body-default-l">
 							{home.subline}
 						</Text>
-						<Button
-							data-border="conservative"
-							href={`/${locale}/about`}
-							variant="tertiary"
-							suffixIcon="chevronRight"
-							size="m">
-							<Flex
-								gap="8"
-								alignItems="center">
-								{about.avatar.display && (
-									<Avatar
-										style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
-										src={person.avatar}
-										size="m"/>
-									)}
-									{t("about.title")}
-							</Flex>
-						</Button>
+						<Flex
+							gap="8"
+							alignItems="center">
+							<Button
+								data-border="conservative"
+								href={`/${locale}/about`}
+								variant="tertiary"
+								suffixIcon="chevronRight"
+								size="m">
+								<Flex
+									gap="8"
+									alignItems="center">
+									{about.avatar.display && (
+										<Avatar
+											style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
+											src={person.avatar}
+											size="m"/>
+										)}
+										{t("about.title")}
+								</Flex>
+							</Button>
+							{(() => {
+								const linkedIn = social.find(item => item.icon === 'linkedin' && item.link);
+								return linkedIn && (
+									<IconButton
+										href={linkedIn.link}
+										icon="linkedin"
+										tooltip="LinkedIn"
+										size="m"
+										variant="ghost"/>
+								);
+							})()}
+						</Flex>
 						{('display' in about.technical ? about.technical.display : true) && (
 						<Flex fillWidth direction="column" paddingY="xs" gap="m">
 							<Flex
