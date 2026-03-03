@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/components/mdx'
 import { formatDate, getPosts } from '@/app/utils'
-import { Avatar, Button, Flex, Heading, SmartImage, Text } from '@/once-ui/components'
+import { Avatar, Button, Flex, Heading, Text } from '@/once-ui/components'
 
 import { baseURL, renderContent } from '@/app/resources'
 import { unstable_setRequestLocale } from 'next-intl/server'
@@ -141,14 +141,6 @@ export default function Blog({ params }: BlogParams) {
 					{formatDate(post.metadata.publishedAt)}
 				</Text>
 			</Flex>
-			{post.metadata.image && typeof post.metadata.image === 'string' && (
-				<SmartImage
-					aspectRatio="16 / 9"
-					radius="m"
-					alt={post.metadata.title}
-					src={post.metadata.image}
-					unoptimized={post.metadata.image.startsWith('http://') || post.metadata.image.startsWith('https://')}/>
-			)}
 			<Flex
 				as="article"
 				direction="column"
