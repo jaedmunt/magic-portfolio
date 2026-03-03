@@ -33,6 +33,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
     ...props
 }) => {
     const [isEnlarged, setIsEnlarged] = useState(false);
+    const [transform, setTransform] = useState<React.CSSProperties>({});
     const imageRef = useRef<HTMLDivElement>(null);
 
     const handleClick = () => {
@@ -53,25 +54,39 @@ const SmartImage: React.FC<SmartImageProps> = ({
         };
     }, [isEnlarged]);
 
-    const calculateTransform = () => {
-        if (typeof window === 'undefined' || !imageRef.current) return {};
+    useEffect(() => {
+        if (typeof window === 'undefined' || !imageRef.current || !isEnlarged) {
+            setTransform({});
+            return;
+        }
 
-        const rect = imageRef.current.getBoundingClientRect();
-        const scaleX = window.innerWidth / rect.width;
-        const scaleY = window.innerHeight / rect.height;
-        const scale = Math.min(scaleX, scaleY) * 0.9;
+        const calculateTransform = () => {
+            if (!imageRef.current) return {};
 
-        const translateX = (window.innerWidth - rect.width) / 2 - rect.left;
-        const translateY = (window.innerHeight - rect.height) / 2 - rect.top;
+            const rect = imageRef.current.getBoundingClientRect();
+            const scaleX = window.innerWidth / rect.width;
+            const scaleY = window.innerHeight / rect.height;
+            const scale = Math.min(scaleX, scaleY) * 0.9;
 
-        return {
-            transform: isEnlarged
-                ? `translate(${translateX}px, ${translateY}px) scale(${scale})`
-                : 'translate(0, 0) scale(1)',
-            transition: 'all 0.3s ease-in-out',
-            zIndex: isEnlarged ? 2 : 1,
+            const translateX = (window.innerWidth - rect.width) / 2 - rect.left;
+            const translateY = (window.innerHeight - rect.height) / 2 - rect.top;
+
+            return {
+                transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
+                transition: 'all 0.3s ease-in-out',
+                zIndex: 2,
+            };
         };
-    };
+
+        setTransform(calculateTransform());
+
+        const handleResize = () => {
+            setTransform(calculateTransform());
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isEnlarged]);
 
     const isVideo = src.endsWith('.mp4');
 
@@ -93,7 +108,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
                     aspectRatio,
                     cursor: enlarge ? 'pointer' : 'default',
                     borderRadius: isEnlarged ? '0' : radius ? `var(--radius-${radius})` : undefined,
-                    ...calculateTransform(),
+                    ...transform,
                     ...style,
                 }}
                 className={classNames(className)}

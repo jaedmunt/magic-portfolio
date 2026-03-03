@@ -38,12 +38,17 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({
     );
 
     const copyURL = (id: string): void => {
+        if (typeof window === 'undefined') return;
         const url = `${window.location.origin}${window.location.pathname}#${id}`;
-        navigator.clipboard.writeText(url).then(() => {
-            addToast('success', 'Link copied to clipboard.');
-        }, () => {
-            addToast('danger', 'Failed to copy link.');
-        });
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(url).then(() => {
+                addToast('success', 'Link copied to clipboard.');
+            }, () => {
+                addToast('danger', 'Failed to copy link.');
+            });
+        } else {
+            addToast('danger', 'Clipboard API not available.');
+        }
     };
 
     const variantMap = {
