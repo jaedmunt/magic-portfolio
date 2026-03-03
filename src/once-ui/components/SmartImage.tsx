@@ -55,37 +55,54 @@ const SmartImage: React.FC<SmartImageProps> = ({
     }, [isEnlarged]);
 
     useEffect(() => {
-        if (typeof window === 'undefined' || !imageRef.current || !isEnlarged) {
+        if (typeof window === 'undefined' || !isEnlarged) {
             setTransform({});
             return;
         }
 
+        let mounted = true;
+
         const calculateTransform = () => {
-            if (!imageRef.current) return {};
+            if (!mounted || !imageRef.current) return {};
+            
+            try {
+                const rect = imageRef.current.getBoundingClientRect();
+                const scaleX = window.innerWidth / rect.width;
+                const scaleY = window.innerHeight / rect.height;
+                const scale = Math.min(scaleX, scaleY) * 0.9;
 
-            const rect = imageRef.current.getBoundingClientRect();
-            const scaleX = window.innerWidth / rect.width;
-            const scaleY = window.innerHeight / rect.height;
-            const scale = Math.min(scaleX, scaleY) * 0.9;
+                const translateX = (window.innerWidth - rect.width) / 2 - rect.left;
+                const translateY = (window.innerHeight - rect.height) / 2 - rect.top;
 
-            const translateX = (window.innerWidth - rect.width) / 2 - rect.left;
-            const translateY = (window.innerHeight - rect.height) / 2 - rect.top;
-
-            return {
-                transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
-                transition: 'all 0.3s ease-in-out',
-                zIndex: 2,
-            };
+                return {
+                    transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
+                    transition: 'all 0.3s ease-in-out',
+                    zIndex: 2,
+                };
+            } catch (error) {
+                return {};
+            }
         };
 
-        setTransform(calculateTransform());
+        // Use setTimeout to ensure DOM is ready
+        const timeoutId = setTimeout(() => {
+            if (mounted && imageRef.current) {
+                setTransform(calculateTransform());
+            }
+        }, 0);
 
         const handleResize = () => {
-            setTransform(calculateTransform());
+            if (mounted) {
+                setTransform(calculateTransform());
+            }
         };
 
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        return () => {
+            mounted = false;
+            clearTimeout(timeoutId);
+            window.removeEventListener('resize', handleResize);
+        };
     }, [isEnlarged]);
 
     const isVideo = src.endsWith('.mp4');
