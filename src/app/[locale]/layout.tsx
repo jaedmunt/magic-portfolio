@@ -5,7 +5,6 @@ import classNames from 'classnames';
 
 import { Flex, Background } from '@/once-ui/components'
 import { Footer, Header, RouteGuard } from "@/components";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { baseURL, effects, style } from '@/app/resources'
 import Terminal from '@/components/Terminal';
 
@@ -131,12 +130,10 @@ export default async function RootLayout({
 						<Flex
 							justifyContent="center"
 							fillWidth minHeight="0">
-							<ErrorBoundary>
-								<RouteGuard>
-									{children}
-									<Analytics />
-								</RouteGuard>
-							</ErrorBoundary>
+							<RouteGuard>
+								{children}
+								<Analytics />
+							</RouteGuard>
 						</Flex>
 					</Flex>
 					<Footer/>
