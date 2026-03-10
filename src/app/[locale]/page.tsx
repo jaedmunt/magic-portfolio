@@ -161,8 +161,7 @@ export default function Home(
 					
 				
 			</Flex>
-			{/* GitHub Calendar - commented out for cleaner resume-like design */}
-			{/* <Flex
+			<Flex
 				fillWidth
 				direction="column"
 				paddingY="l" gap="s"
@@ -170,7 +169,7 @@ export default function Home(
 				<GitHubCalendar 
 					username="jaedmunt">
 				</GitHubCalendar>
-			</Flex> */}
+			</Flex>
 			<Projects range={[1,1]} locale={locale}/>
 			
 			
