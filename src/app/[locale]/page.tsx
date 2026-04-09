@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Heading, Flex, Text, Button,  Avatar, SmartImage, IconButton } from '@/once-ui/components';
+import { TechLinkProvider } from '@/components/TechLinkContext';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -83,11 +84,18 @@ export default function Home(
 						direction="column"
 						fillWidth gap="m"
 						style={{ maxWidth: '100%' }}>
-						<Heading
-							wrap="balance"
-							variant="display-strong-l">
-							{home.headline}
-						</Heading>
+						<Flex direction="column" gap="4">
+							<Heading
+								wrap="balance"
+								variant="display-strong-l">
+								Software Engineer
+							</Heading>
+							<Text
+								variant="display-default-s"
+								onBackground="neutral-weak">
+								Agentic AI, Search &amp; Data Infrastructure
+							</Text>
+						</Flex>
 						<Text
 							wrap="balance"
 							onBackground="neutral-weak"
@@ -126,24 +134,40 @@ export default function Home(
 										variant="ghost"/>
 								);
 							})()}
+							{(() => {
+								const github = social.find(item => item.icon === 'github' && item.link);
+								return github && (
+									<IconButton
+										href={github.link}
+										icon="github"
+										tooltip="GitHub"
+										size="m"
+										variant="ghost"/>
+								);
+							})()}
 						</Flex>
 						{('display' in about.technical ? about.technical.display : true) && (
-						<Flex fillWidth direction="column" paddingY="xs" gap="m">
+						<TechLinkProvider>
+						<Flex fillWidth direction="column" paddingY="4" gap="s">
 							<Flex
 								direction="row"
-								wrap={true}  // Changed to true to enable wrapping on mobile
-								fillWidth gap="xl">
+								wrap={true}
+								fillWidth gap="s">
 								{about.technical.skills
 									.filter(skill => skill.title !== "Certifications")
-									.filter(skill => skill.title !== "Languages")
+									.filter(skill => skill.title !== "Languages (Spoken)")
 									.map((skill, index) => (
 									<Flex
 										key={`${skill}-${index}`}
 										direction="column"
-										paddingRight="xs"
-										paddingBottom="xs"
-										gap="0"
+										gap="4"
 										style={{ maxWidth: '100%', flex: '1 1 auto' }}>
+										<Text
+											variant="label-default-xs"
+											onBackground="neutral-weak"
+											style={{ opacity: 0.5, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+											{skill.title}
+										</Text>
 										<Text
 											variant="body-default-s"
 											onBackground="neutral-weak"
@@ -155,6 +179,7 @@ export default function Home(
 								))}
 							</Flex>
 						</Flex>
+						</TechLinkProvider>
 					)}
 						
 					</Flex>

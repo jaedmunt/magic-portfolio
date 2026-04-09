@@ -28,10 +28,6 @@ export const Footer = () => {
                     <Text paddingX="4">
                         {person.name}
                     </Text>
-                    <Text onBackground="neutral-weak">
-                        {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-                        <SmartLink style={{marginLeft: '-0.125rem'}} href="https://once-ui.com">Once UI</SmartLink>has really nice components.
-                    </Text>
                 </Text>
                 <Flex
                     gap="16">

@@ -10,21 +10,21 @@ summary: "A comprehensive overview of my research on how open innovation redefin
 
 Below is a series of excerpts nd summaries of several parts of my dissertation. Enjoy! (I hope)
 
-Open innovation has become a ubiquitous term in the technology sector, championing a shift away from the closed, proprietary R&D pipelines that once dominated corporate strategy. Rather than solely relying on internal expertise and intellectual property, open innovation emphasizes active collaboration with external partners—be they universities, suppliers, or even competitors. While this approach has clearly propelled technological advancement, it also challenges our usual ways of *measuring* that advancement. Do the traditional metrics—like patent counts, R&D intensity, and product launches—truly reflect the full breadth of collaborative innovation activities? My dissertation seeks to explore that question head-on: **How does open innovation transform innovation measurement in the technology sector?**
+Open innovation has become a ubiquitous term in the technology sector, championing a shift away from the closed, proprietary R&D pipelines that once dominated corporate strategy. Rather than solely relying on internal expertise and intellectual property, open innovation emphasizes active collaboration with external partners, be they universities, suppliers, or even competitors. While this approach has clearly propelled technological advancement, it also challenges our usual ways of *measuring* that advancement. Do the traditional metrics, like patent counts, R&D intensity, and product launches, truly reflect the full breadth of collaborative innovation activities? My dissertation seeks to explore that question head-on: **How does open innovation transform innovation measurement in the technology sector?**
 
 
 ## The Central Research Question
 
 > **RQ**: *How does open innovation reshape the way we track and quantify innovation outcomes in tech?*
 
-This question arose from a gap in the current literature: although numerous studies highlight the successes of open innovation, relatively little has been said about how this new paradigm impacts **innovation metrics**. The field remains wedded to conventional yardsticks like patent filings—even as multi-firm collaborations and knowledge-sharing intensify.
+This question arose from a gap in the current literature: although numerous studies highlight the successes of open innovation, relatively little has been said about how this new paradigm impacts **innovation metrics**. The field remains wedded to conventional yardsticks like patent filings, even as multi-firm collaborations and knowledge-sharing intensify.
 
 ### Objectives & Hypotheses
 
 1. **Objective 1**  
    Assess the *causal relationship* between firms’ participation in open innovation networks and their performance (e.g., turnover, growth, patent activity).
 
-   - **Hypothesis 1**: Firms with a higher degree of collaboration intensity—where "intensity" refers to the diversity and depth of external partnerships—will show superior innovation outcomes compared to those with lower or no collaborative engagement.
+   - **Hypothesis 1**: Firms with a higher degree of collaboration intensity, where "intensity" refers to the diversity and depth of external partnerships, will show superior innovation outcomes compared to those with lower or no collaborative engagement.
 
 2. **Objective 2**  
    Investigate the **statistical link** between open innovation participation and tangible performance metrics, seeking evidence of causality.
@@ -37,21 +37,21 @@ This question arose from a gap in the current literature: although numerous stud
 
 ### 1. Evolving Perspectives on Open Innovation
 
-**Chesbrough (2012)** defines open innovation as a framework that facilitates bi-directional flows of knowledge—both inbound (e.g., incorporating external R&D) and outbound (e.g., licensing or spinning off technologies). This model stands in stark contrast to the older, closed innovation concept, where a company’s internal R&D was seen as the singular engine of new products and services.
+**Chesbrough (2012)** defines open innovation as a framework that facilitates bi-directional flows of knowledge, both inbound (e.g., incorporating external R&D) and outbound (e.g., licensing or spinning off technologies). This model stands in stark contrast to the older, closed innovation concept, where a company’s internal R&D was seen as the singular engine of new products and services.
 
 Researchers like **Rangus et al. (2017)** have shown that open innovation can accelerate internal processes and also pave the way for new market opportunities. However, these benefits hinge critically on a firm’s ability to *absorb* external knowledge, often called **absorptive capacity**.
 
 ### 2. Network Structures in Innovation Ecosystems
 
-**Meeus et al. (2008)** highlight that a firm’s position within a collaborative network—its centrality—can significantly affect its creative outputs. Highly central firms often enjoy easier access to diverse forms of knowledge, but may also face complexity in coordination. Meanwhile, **Leiponen and Helfat (2011)** underscore how decentralized R&D efforts can foster more “imitative” innovations but aren’t as effective for truly novel, “new-to-market” breakthroughs.
+**Meeus et al. (2008)** highlight that a firm’s position within a collaborative network, its centrality, can significantly affect its creative outputs. Highly central firms often enjoy easier access to diverse forms of knowledge, but may also face complexity in coordination. Meanwhile, **Leiponen and Helfat (2011)** underscore how decentralized R&D efforts can foster more “imitative” innovations but aren’t as effective for truly novel, “new-to-market” breakthroughs.
 
 Taken together, these studies suggest that open innovation is not merely about “being collaborative” in a vacuum; it’s also about *how* and *where* a firm sits in the broader network, and *what type* of innovation it aims to produce.
 
 ### 3. Measuring Innovation in Collaborative Settings
 
-Despite the recognized value of open innovation, **measurement** remains a weak point. Most industry metrics (e.g., patent counts, R&D budgets, number of new product launches) fail to account for the nuanced, shared, and sometimes intangible nature of collaborative discovery. **Hartley et al. (2013)** argue that multi-actor engagement across public, private, and non-profit sectors leads to a richer ecosystem—one that conventional metrics can barely capture.
+Despite the recognized value of open innovation, **measurement** remains a weak point. Most industry metrics (e.g., patent counts, R&D budgets, number of new product launches) fail to account for the nuanced, shared, and sometimes intangible nature of collaborative discovery. **Hartley et al. (2013)** argue that multi-actor engagement across public, private, and non-profit sectors leads to a richer ecosystem, one that conventional metrics can barely capture.
 
-The question, therefore, isn’t just whether open innovation is effective, but whether we might need *new or adapted metrics*—like network centrality or collaborative intensity—that better mirror the realities of modern R&D ecosystems.
+The question, therefore, isn’t just whether open innovation is effective, but whether we might need *new or adapted metrics*, like network centrality or collaborative intensity, that better mirror the realities of modern R&D ecosystems.
 
 ---
 
@@ -92,7 +92,7 @@ For **SNA**, I constructed a graph where:
 - **Nodes** represent entities (firms or individuals) listed on patent applications.  
 - **Edges** indicate a co-patenting event, weighted by how many collaborators were involved (“collaborative intensity”).
 
-Software tools like **Gephi**, **NetworkX**, and **Matplotlib** enabled me to visualize and experiment with different layout algorithms (force-directed, etc.). This step primarily aimed to reveal patterns—like clusters of high-intensity collaboration—and to test the viability of using metrics such as “degree centrality” or “betweenness centrality” as alternative measures of innovation activity.
+Software tools like **Gephi**, **NetworkX**, and **Matplotlib** enabled me to visualize and experiment with different layout algorithms (force-directed, etc.). This step primarily aimed to reveal patterns, like clusters of high-intensity collaboration, and to test the viability of using metrics such as “degree centrality” or “betweenness centrality” as alternative measures of innovation activity.
 
 ---
 
@@ -133,7 +133,7 @@ The final dataset focuses on the period **2009–2018**, with some expansions to
 Despite the strong theoretical support for open innovation as a performance booster, my DiD analysis *did not find a robust causal link* between the presence of co-patenting (as an open innovation indicator) and **annual turnover** once firm size, sector, and other controls were factored in. The interaction term (`[ Post(i,t) × Treated(i) ]`) was not statistically significant at conventional levels.  
 
 - **Possible Interpretation**:  
-  - Turnover, as a single metric, might not be sensitive enough to capture the nuanced benefits of collaboration—especially if those benefits manifest in *qualitative* ways (e.g., knowledge spillovers) rather than immediate revenue boosts.  
+  - Turnover, as a single metric, might not be sensitive enough to capture the nuanced benefits of collaboration, especially if those benefits manifest in *qualitative* ways (e.g., knowledge spillovers) rather than immediate revenue boosts.  
   - Open innovation might enhance *long-term growth* or *innovation depth* more than short-term revenue.
 
 ### 2. Social Network Insights
@@ -147,17 +147,17 @@ While these patterns reaffirm that open innovation is widely practiced, they als
 
 ### 3. Toward a Refined Measurement Approach
 
-The project tentatively suggests that **network-centric metrics** (e.g., betweenness centrality, density measures) could add substantial insight into how open innovation functions—and which configurations deliver the most impactful results. However, real-world adoption of such measures faces challenges, including data availability, standardization, and the interpretive complexity of advanced metrics.
+The project tentatively suggests that **network-centric metrics** (e.g., betweenness centrality, density measures) could add substantial insight into how open innovation functions, and which configurations deliver the most impactful results. However, real-world adoption of such measures faces challenges, including data availability, standardization, and the interpretive complexity of advanced metrics.
 
 ---
 
 ## Discussion & Implications
 
 1. **Rethinking “Success” Metrics**  
-   The near-exclusive reliance on patents as a barometer of R&D success may mask the realities of *collective* innovation. A co-patent is only one type of collaboration indicator—partnerships often yield intangible knowledge, quick prototypes, or spin-offs that never see formal IP filing.
+   The near-exclusive reliance on patents as a barometer of R&D success may mask the realities of *collective* innovation. A co-patent is only one type of collaboration indicator, partnerships often yield intangible knowledge, quick prototypes, or spin-offs that never see formal IP filing.
 
 2. **Policy & Investment Focus**  
-   For policymakers, incentivizing open innovation calls for new structures that reward *collaborative outputs*—not just singular inventorship. For venture capital (VC) and corporate investors, embracing new measurement frameworks could uncover undervalued organizations leading in synergy and cross-pollination, rather than short-term revenue alone.
+   For policymakers, incentivizing open innovation calls for new structures that reward *collaborative outputs*, not just singular inventorship. For venture capital (VC) and corporate investors, embracing new measurement frameworks could uncover undervalued organizations leading in synergy and cross-pollination, rather than short-term revenue alone.
 
 3. **Practical Challenges**  
    Measuring collaborative intensity or network centrality is not trivial. It demands comprehensive, standardized data sharing, which many firms are reluctant to commit to. Achieving reproducibility (a core goal of my methodology) remains contingent on open data standards and increased transparency in the private sector.

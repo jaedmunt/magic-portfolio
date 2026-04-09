@@ -1,5 +1,6 @@
 import { ColorInput, InlineCode } from "@/once-ui/components";
 import Link from "next/link";
+import { TechLink } from "@/components/TechLink";
 
 const person = {
     firstName: 'Jaedon',
@@ -7,10 +8,10 @@ const person = {
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Venture Capital and Technology Professional',
+    role:      'Software Engineer | Agentic AI, Search & Data Infrastructure',
     avatar:    '/images/avatar.jpg',
     location:  'Europe/London',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'German', 'Afrikaans']  // optional: Leave the array empty if you don't want to display languages
+    languages: ['English', 'German']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
@@ -38,24 +39,9 @@ const social = [
         link: '',
     },
     {
-        name: 'Email - ChipHub',
+        name: 'Email',
         icon: 'email',
-        link: 'mailto:jaedon@chiphub.com',
-    },
-    {
-        name: 'Email - YAS Invest & Spartech',
-        icon: 'email',
-        link: 'mailto:jaedon@yasinvest.com',
-    },
-    {
-        name: 'Email - Century 💎',
-        icon: 'email',
-        link: 'mailto:jmunton@centuryglobalpartners.com',
-    },
-    {
-        name: 'Email - NTU 🦁',
-        icon: 'email',
-        link: 'mailto:n1098983@my.ntu.ac.uk',
+        link: 'mailto:jaedonmuntonwork@gmail.com',
     },
 ]
 
@@ -63,12 +49,12 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Venture Capital and Technology Professional</>,
-    subline: <>I'm Jaedon, a multidisciplinary software technologist and venture analyst with 2 years sourcing investments in MENA and 4 years operating early-stage software SaaS startups across the UK and USA. Currently Analyst at <Link href="https://evvolve.io"><InlineCode style={{ color: '#b2b2b2' }}>evvolve</InlineCode></Link> and Founder of <Link href="https://fluxsearch.io"><InlineCode style={{ color: '#d2d2d2' }}>Flux</InlineCode></Link>, a semantic search engine for developers and AI agents.<br/><br/>Previously Vice President of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: '#b2b2b2' }}>ChipHub</InlineCode></Link> and Analyst at <Link href="https://www.yasinvest.com"><InlineCode style={{ color: '#b2b2b2' }}>Spartech Ventures</InlineCode></Link>. Experienced across finance, product, engineering, and sales with a global perspective on innovation and company building.</>
+    headline: <>Software Engineer | Agentic AI, Search & Data Infrastructure</>,
+    subline: <>I'm Jaedon, a hands-on software engineer specialising in production agentic AI, search, and data infrastructure. I've worked across startups backed by <InlineCode style={{ color: '#b2b2b2' }}>Oxford University Innovation</InlineCode> and in the <InlineCode style={{ color: '#b2b2b2' }}>Nvidia Inception</InlineCode> program, spanning semiconductor, VC, and future-of-work SaaS.<br/><br/>Founder of <Link href="https://fluxsearch.io"><InlineCode style={{ color: '#d2d2d2' }}>Flux Search</InlineCode></Link>, a freshness-first semantic search engine for developers and AI agents. Previously Software Engineer at <Link href="https://evvolve.io"><InlineCode style={{ color: '#b2b2b2' }}>Evvolve & Partners</InlineCode></Link>, VP of Partnerships at <Link href="https://www.chiphub.com"><InlineCode style={{ color: '#b2b2b2' }}>ChipHub</InlineCode></Link>, and Analyst at <Link href="https://www.yasinvest.com"><InlineCode style={{ color: '#b2b2b2' }}>Spartech Ventures</InlineCode></Link>.</>
 }
 
 const about = {
-    label: 'About',
+    label: 'CV',
     title: 'About me',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
@@ -85,74 +71,43 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>I'm Jaedon, a multidisciplinary technologist and venture analyst currently at evvolve. I'm also building Flux, a semantic search engine for developers, AI agents & content teams. Previously, I was Vice President of Partnerships at ChipHub and Analyst at Spartech Ventures, a YAS Investments fund where I sourced MENA's most innovative startups.</>
+        description: <>I'm Jaedon, a hands-on software engineer specialising in production agentic AI, search, and data infrastructure. I'm building Flux Search, a freshness-first semantic search engine for developers and AI agents. Previously Software Engineer at Evvolve & Partners, VP of Partnerships at ChipHub (Nvidia Inception program), and Analyst at Spartech Ventures. I've worked across startups including one backed by Oxford University Innovation. Grounded in econometrics with strong commercial awareness across finance, product, and engineering.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Professional Experience',
         experiences: [
             {
-                company: 'Flux (fluxsearch.io)',
+                company: 'Flux Search (fluxsearch.io)',
                 timeframe: 'Jun 2025 - Present',
                 role: 'Founder',
                 achievements: [
-                    <>Building a semantic search engine for developers, AI agents & content teams, offering the freshest results through novel approaches to crawling and indexing.</>
+                    <>Architecting and building a freshness-first semantic search engine for developers and AI agents, focused on real-time indexing and hybrid retrieval.</>,
+                    <>Cleaned over 1.5 billion parquet rows of URLs and web data by refactoring to Polars, Tokio, and Reqwest, reducing pipeline completion from 2 months to 3 days.</>,
+                    <>Designed modular crawling and ingestion pipelines with dockerised EC2/K8S services deployed with Terraform, Helm, and GitHub Actions on AWS.</>,
+                    <>Prototyped in Python before refactoring to Go and Rust for memory safety and concurrency via goroutines to handle thousands of requests per second.</>,
+                    <>Implemented vector-based and keyword hybrid retrieval with controlled ranking logic and performance instrumentation.</>,
+                    <>Built reusable modular Rust components: parsers, URL validators, robots.txt checkers, crawlers, and schedulers.</>,
+                    <>Expanded coverage from news and blogs to codebases (GitHub, Crates.io, PyPI, NPM) and academic papers.</>
                 ],
                 images: []
             },
             {
                 company: 'Evvolve & Partners',
-                timeframe: 'Aug 2025 - Present',
-                role: 'Venture Analyst / Software Engineer',
+                timeframe: 'Aug 2025 - Mar 2026',
+                role: 'Software Engineer / Analyst',
                 achievements: [
-                  <>Sourced and evaluated early-stage technology startups (AI, data, enterprise software), owning screening, diligence, and investment memos.</>,
-                  <>Built and operated a startup–investor matching engine and research pipeline used in live client workflows, covering ingestion, enrichment, ranking, reranking, and match-reason generation.</>,
-                  <>Designed hybrid retrieval and ranking systems combining keyword search (BM25) and vector search, with optional reranking to improve relevance and reduce analyst time.</>,
-                  <>Implemented robust data pipelines for ingesting large CSV datasets, normalising schemas, deduplicating entities, validating URLs/domains, and enforcing idempotent upserts.</>,
-                  <>Developed LLM-assisted extraction and evaluation workflows for documents and unstructured text, with structured outputs for downstream scoring and CRM integration.</>,
-                  <>Led technical due diligence for product and AI stacks, including architecture review, data/ML pipeline assessment, and reliability/cost tradeoffs for deployment.</>,
-                  <>Worked closely with founders on fundraising materials (narrative, metrics, data room structure), and supported investor targeting and outreach strategy.</>
-                ],
-                skills: [
-                  // Languages
-                  'Go (Golang)',
-                  'Python',
-                  'Rust',
-                  'TypeScript/JavaScript',
-                  'SQL',
-              
-                  // AI / Retrieval
-                  'LLM integration (structured outputs, tool calling, RAG)',
-                  'Vector databases (Weaviate)',
-                  'Hybrid search (BM25 + vector)',
-                  'Embedding pipelines',
-                  'Reranking pipelines',
-                  'Query expansion (HyDE-style)',
-              
-                  // Data Engineering
-                  'ETL/ELT pipelines',
-                  'Schema design and normalization',
-                  'Entity resolution / deduplication',
-                  'Web data enrichment and validation',
-                  'Document parsing and content extraction (OCR, PDF pipelines)',
-              
-                  // Infra / Deployment
-                  'Docker',
-                  'Kubernetes',
-                  'Terraform',
-                  'Linux',
-                  'AWS',
-                  'CI/CD',
-              
-                  // Datastores
-                  'PostgreSQL',
-                  'Supabase (hosted + self-hosted)',
-                  'Redis',
-              
-                  // Product / VC
-                  'Startup sourcing and diligence',
-                  'Technical due diligence',
-                  'Fundraising support and investor targeting'
+                  <>Solo 0-1 role designing and building a production-grade investor–startup matching engine in use by 80+ fundraising clients raising $500k–$30M.</>,
+                  <>Implemented hybrid retrieval and ranking pipelines (vector DB, embeddings) combining filters, embedding similarity, and deterministic scoring logic.</>,
+                  <>Created an investor matcher from co-investment datasets leveraging a custom GPU-accelerated Node2Vec implementation in PyTorch Geometric.</>,
+                  <>Built AI agents to onboard startups with tool use to write answers to PostgreSQL and trigger OCR document extraction.</>,
+                  <>Defined a data model aggregating multiple databases and CRMs (Attio, BigQuery) containing startup information, call notes, and investor data.</>,
+                  <>Built ETL workflows to scrape, clean, enrich, and validate large investor datasets (Parquet, PostgreSQL, BigQuery), with QA and regression testing in LangSmith.</>,
+                  <>Designed evaluation loops to measure precision, reduce duplication/poor quality records, and improve relevance across thousands of records.</>,
+                  <>Containerised services and maintained reproducible environments for ranking, reranking, and match-reason generation pipelines in Docker/Go.</>,
+                  <>Built robust retries, resumability, idempotency, and cost optimisation for long-running pipelines, with observability via Grafana and Prometheus.</>,
+                  <>Converted Figma designs into frontend interfaces in TypeScript on Bun/Deno and deployed on Vercel and AWS EC2 behind Nginx/Caddy load balancers.</>,
+                  <>Consulted startups on fundraising strategy and programmatically prepared pitch materials and investor presentations.</>
                 ],
                 images: []
               },
@@ -161,24 +116,23 @@ const about = {
                 timeframe: 'Oct 2024 - May 2025',
                 role: 'Vice-President of Partnerships',
                 achievements: [
-                    <>More aptly titled 'founders' associate', responsible for strategising and executing GTM and fundraising, and hiring developers.</>,
-                    <>Pitched to global OEMs including Google, Apple, Meta, Nexperia et al., using SPICED framework and collected feedback and ethnographic insights for the team.</>,
-                    <>Coded dockerised agentic search and comparison tools for datasheets cutting time by ~70% in golang, python, and integrated into nextJS frontend.</>,
-                    <>Developed internal prospecting tools to find ICPs, saving $300 per month (price of next best alternative), and enabling domain-specific outreach.</>,
-                    <>Authored and delivered sales and investment decks and pitches, using excellent written communication, and formed partnerships for our GTM in N. America and Korea.</>
+                    <>Designed and built an agentic web search feature for datasheet discovery for millions of datasheets via SERP-style APIs and search operators.</>,
+                    <>Enhanced the Azure-deployed document RAG pipeline in Go and Python, cutting procurement research time by ~70% for secure industry use cases.</>,
+                    <>Developed internal prospecting tools for ICP discovery, replacing $3,600/year in tooling costs and enabling domain-specific outreach.</>,
+                    <>Pitched to global OEMs including Google, Apple, Meta, and Nexperia using the SPICED framework, creating PRDs and domain-tailored marketing content.</>,
+                    <>Hired and managed UK-based frontend developers, owning roadmap prioritisation, ticket processes, and OEM customer feedback loops.</>
                 ],
                 images: []
             },
             {
                 company: 'YAS Investments (Spartech Ventures Fund II)',
-                timeframe: 'Oct 2023 - May 2025',
+                timeframe: 'Oct 2023 - Aug 2025',
                 role: 'Venture Capital Analyst',
                 achievements: [
-                    <>Sourced for MENA-focused Spartech Ventures 2nd fund (growth stage, tech-enabled, sector agnostic) maintaining strong relationships with growth stage executives.</>,
-                    <>Outreach to founders seeking $2-5mm ticket sizes (equity) and $10M-$120M (debt), qualifying startups, using written communication skills to generate memos.</>,
-                    <>Conducted market mapping, end-to-end due diligence series B and C rounds (~$80m fintech, ~$65m F&B), and supported DDQ answers for a UAE sovereign wealth fund.</>,
-                    <>Coded a finance sector and stage matching service (all-mini-v6 and BERT) for Hub71 in python and docker, which scrapes web data and matches family office and startups.</>,
-                    <>Created marketing materials, developed the website in NextJS (yasinvest.com) for the fund to attract capital during fundraising, ahead of partnership with Hub71.</>
+                    <>Built and used a scouting tool to find suitable startups, taking 4 targets to due diligence and 2 to agreed investment.</>,
+                    <>Built and deployed a web-scraping and matching engine using embedding-based similarity scoring (BERT, all-MiniLM-v6) and automated ranking logic.</>,
+                    <>Extended the matching engine for a Hub71 partnership, connecting 100+ family offices to startup deal flow.</>,
+                    <>Conducted market research that shaped the fund's technology thesis, with analysis fed directly into DDQ materials prepared for Mubadala sovereign fund.</>
                 ],
                 images: []
             },
@@ -187,20 +141,20 @@ const about = {
                 timeframe: 'Mar 2023 - Jun 2024',
                 role: 'Product & Development Lead (Machine Learning)',
                 achievements: [
-                    <>Managed a junior developer as team lead for an ML platform converting text (like this CV) to a standardised taxonomy using NLP – Spacy NER, BERT.</>,
-                    <>Research/product for Sidetree protocol (ETH) credential product – developing business cases, marketing strategy, decks and pitching to university registrars.</>,
-                    <>Delegate at London Tech Week (2023) and Gibraltar Finance Ministry (DLT framework author), interviewed by Gibraltar Broadcasting Corporation.</>
+                    <>Led product & research for a Sidetree (Microsoft x Ethereum) credential platform, developing business cases, GTM strategy, and pitching to university registrars.</>,
+                    <>Managed a junior developer building an ML platform to convert unstructured text into a standardised taxonomy using SpaCy NER and BERT.</>,
+                    <>Built prototypes in Streamlit and React, showcasing to customers and leading ethnographic feedback sessions with students.</>,
+                    <>Represented Certie at London Tech Week (2023) and the Gibraltar Ministry of Finance; interviewed by Gibraltar Broadcasting Corporation.</>
                 ],
                 images: []
             },
             {
-                company: 'Chisholm Hunter',
-                timeframe: 'Nov 2022 - Present',
-                role: 'Sales Professional',
+                company: 'Action Tutoring',
+                timeframe: 'Jan 2023 - Apr 2024',
+                role: 'Information Technology Lead / Tutoring Supervisor (English)',
                 achievements: [
-                    <>Generated £145,000+ in sales per annum, part-time, using strong sales, customer relationship management skills and broad product knowledge.</>,
-                    <>Achieved the highest Sales-Per-Labour-Hour (SPLH) of ~£185 in Nottingham store for consecutive years – the leading KPI for individual performance.</>,
-                    <>Company-wide recognition for contributions including a £7000 sales day (4.7x weekly target) across 11 sales.</>
+                    <>Managed tech administration across 4 school programmes in Nottingham, overseeing data collection used in impact assessments critical to funding bids.</>,
+                    <>Oversaw examinations and data collection during impact assessments to measure the value of the programme.</>
                 ],
                 images: []
             }
@@ -212,18 +166,16 @@ const about = {
         institutions: [
             {
                 name: 'Nottingham Business School',
-                description: <>BA (Hons) Economics | [Sep 2022-Dec 2025]<br/><br/>
-                Dissertation: <br/><br/>
-                <InlineCode style={{ color: '#d2d2d2' }}>How does open innovation impact innovation measurement in the technology sector?</InlineCode> (mixed methods difference-in-differences and social network analysis)<br/><br/>
-                Modules:<br/>
-                <InlineCode style={{ color: '#d2d2d2' }}>Y1</InlineCode> Principles of Microeconomics, Principles of Macroeconomics, Introduction to Finance for Economists, Quantitative Economics<br/><br/>
-                <InlineCode style={{ color: '#b2b2b2' }}>Y2</InlineCode> Econometrics I, Applied Professional Development, Environmental and Resource Economics, Economic Evaluation<br/><br/>
-                <InlineCode style={{ color: '#d2d2d2' }}>Y3</InlineCode> Research Project, Investment Portfolio Management, Macroeconomics Issues and Policy, Developing Professional Impact, The World Economy<br/><br/>
-                Awards:<br/>
-                
-                Dean’s Award (Dec ’23)<br/> Sustainability in Practice <InlineCode style={{ color: '#d2d2d2' }}>Gold</InlineCode><br/> Student Group Executive <InlineCode style={{ color: '#d2d2d2' }}>Gold</InlineCode></>
+                description: <>BSc (Hons) Economics (Triple Crown reaccreditation) | Sep 2022 – Jun 2025<br/><br/>
+                Dissertation: <InlineCode style={{ color: '#d2d2d2' }}>How does open innovation impact innovation measurement in the technology sector?</InlineCode> Using mixed methods difference-in-differences and network analysis. Required joining and processing 95,000+ row datasets using Polars and CuPy.<br/><br/>
+                Modules: Econometrics, Finance for Economists, Quantitative Economics, Resource Economics, Investment Portfolio Management.<br/><br/>
+                Awards: Dean's Award (Dec '23) · Sustainability in Practice <InlineCode style={{ color: '#d2d2d2' }}>Gold</InlineCode> · Student Group Executive <InlineCode style={{ color: '#d2d2d2' }}>Gold</InlineCode></>
+            },
+            {
+                name: "St. Peter's School, York",
+                description: <>A-Levels (Economics, Maths, Politics) & iGCSEs | Sep 2014 – Jun 2019<br/><br/>
+                Full-ride scholarship for a portfolio project exploring a novel approach to in-vivo delivery gene editing via retroviral mechanisms.</>
             }
-            
         ]
     },
     technical: {
@@ -231,70 +183,115 @@ const about = {
             title: 'Technical Skills & Certifications',
             skills: [
                 {
-                title: 'Languages',
-                description: <>English <InlineCode style={{ color: '#d2d2d2' }}>Native</InlineCode><br/>German <InlineCode style={{ color: '#b2b2b2' }}>Professional Working</InlineCode><br/>Afrikaans <InlineCode style={{ color: '#959595' }}>Limited Working</InlineCode></>,
+                title: 'Languages (Spoken)',
+                description: <>English <InlineCode style={{ color: '#d2d2d2' }}>Native</InlineCode><br/>German <InlineCode style={{ color: '#b2b2b2' }}>Professional Working</InlineCode></>,
                 images: []
                 },
                 {
-                title: 'Softwares/Platforms',
+                title: 'Programming Languages',
                 description: <>
-                        <Link href="https://www.python.org/"><InlineCode style={{ color: '#d2d2d2' }}>Python</InlineCode></Link>
-                        <Link href="https://www.rust-lang.org/"><InlineCode style={{ color: '#d2d2d2' }}>Rust</InlineCode></Link>
-                        <Link href="https://golang.org/"><InlineCode style={{ color: '#d2d2d2' }}>Golang</InlineCode></Link>
-                        <Link href="https://www.typescriptlang.org/"><InlineCode style={{ color: '#d2d2d2' }}>TypeScript</InlineCode></Link>
-                        <br />
-                        <Link href="https://www.bun.sh/"><InlineCode style={{ color: '#b2b2b2' }}>Bun</InlineCode></Link>
-                        <Link href="https://www.terraform.io/"><InlineCode style={{ color: '#b2b2b2' }}>Terraform</InlineCode></Link>
-                        <Link href="https://www.docker.com/"><InlineCode style={{ color: '#b2b2b2' }}>Docker</InlineCode></Link>
-                        <Link href="https://k8s.io/"><InlineCode style={{ color: '#b2b2b2' }}>Kubernetes (EKS/Minikube)</InlineCode></Link>
-                        <Link href="https://www.linux.org/"><InlineCode style={{ color: '#b2b2b2' }}>Linux (Arch/Ubuntu)</InlineCode></Link>
-                        <br />
-                        <Link href="https://reactjs.org/"><InlineCode style={{ color: '#b2b2b2' }}>ReactJS</InlineCode></Link>  
-                        <Link href="https://nextjs.org/"><InlineCode style={{ color: '#b2b2b2' }}>NextJS</InlineCode></Link>
-                        <Link href="https://remix.run/"><InlineCode style={{ color: '#b2b2b2' }}>RemixJS</InlineCode></Link>
-                        <Link href="https://hydrogen.shopify.dev/"><InlineCode style={{ color: '#b2b2b2' }}>Hydrogen</InlineCode></Link>    
-                        <Link href="https://weaviate.io/"><InlineCode style={{ color: '#b2b2b2' }}>Weaviate (Vector Database)</InlineCode></Link>
-                        <Link href="https://vercel.com/"><InlineCode style={{ color: '#b2b2b2' }}>Vercel</InlineCode></Link>
-                        <Link href="https://supabase.com/"><InlineCode style={{ color: '#b2b2b2' }}>PSQL</InlineCode></Link>
-                        <br />
-                        <Link href="https://resend.com/"><InlineCode style={{ color: '#b2b2b2' }}>Resend</InlineCode></Link>
-                        <Link href="https://www.mailgun.com/"><InlineCode style={{ color: '#b2b2b2' }}>Mailgun</InlineCode></Link> 
-                        <Link href="https://www.digitalocean.com/"><InlineCode style={{ color: '#b2b2b2' }}>Digital Ocean</InlineCode></Link>   
-                        <Link href="https://www.anaconda.com/"><InlineCode style={{ color: '#b2b2b2' }}>Anaconda</InlineCode></Link>  
-                        <Link href="https://git-scm.com/"><InlineCode style={{ color: '#b2b2b2' }}>Git</InlineCode></Link> <br/> 
-                        <Link href="https://remix.run/"><InlineCode style={{ color: '#b2b2b2' }}>RemixJS</InlineCode></Link>
-                        <Link href="https://www.docker.com/"><InlineCode style={{ color: '#b2b2b2' }}>Docker</InlineCode></Link>
-                        <Link href="https://learn.microsoft.com/en-us/copilot-studio/"><InlineCode style={{ color: '#b2b2b2' }}>Azure Copilot Studio</InlineCode></Link>
-                        <Link href="https://www.openai.com/"><InlineCode style={{ color: '#b2b2b2' }}>Langchain/Langsmith</InlineCode></Link>
-                        <Link href="https://aws.amazon.com/"><InlineCode style={{ color: '#b2b2b2' }}>AWS</InlineCode></Link> 
-                        <br />
-                        <Link href="https://jupyter.org/"><InlineCode style={{ color: '#b2b2b2' }}>Jupyter</InlineCode></Link> <br/>
-                        <Link href="https://colab.research.google.com/"><InlineCode style={{ color: '#b2b2b2' }}>Google Colab</InlineCode></Link>  
-                        <Link href="https://pandas.pydata.org/"><InlineCode style={{ color: '#b2b2b2' }}>Pandas</InlineCode></Link> 
-                        <Link href="https://pola.rs/"><InlineCode style={{ color: '#b2b2b2' }}>Polars</InlineCode></Link>
-                        <Link href="https://numpy.org/"><InlineCode style={{ color: '#b2b2b2' }}>Numpy</InlineCode></Link>  
-                        <Link href="https://scipy.org/"><InlineCode style={{ color: '#b2b2b2' }}>Scipy</InlineCode></Link>
-                        <Link href="https://www.postman.com/"><InlineCode style={{ color: '#b2b2b2' }}>Postman</InlineCode></Link> <br/> 
-                        <Link href="https://www.minitab.com/"><InlineCode style={{ color: '#959595' }}>Minitab</InlineCode></Link>  
-                        <Link href="https://www.eviews.com/"><InlineCode style={{ color: '#959595' }}>Eviews</InlineCode></Link> <br/> 
-                        <Link href="https://www.atlassian.com/software/jira"><InlineCode style={{ color: '#b2b2b2' }}>Jira</InlineCode></Link>   
-                        <Link href="https://monday.com/"><InlineCode style={{ color: '#b2b2b2' }}>Monday</InlineCode></Link>  
-                        <Link href="https://www.canva.com/"><InlineCode style={{ color: '#b2b2b2' }}>Canva</InlineCode></Link>
-                        <Link href="https://www.figma.com/"><InlineCode style={{ color: '#b2b2b2' }}>Figma</InlineCode></Link>  
-                        <Link href="https://www.attio.com/"><InlineCode style={{ color: '#b2b2b2' }}>Attio</InlineCode></Link>
-                        <Link href="https://www.airtable.com/"><InlineCode style={{ color: '#b2b2b2' }}>Airtable</InlineCode></Link>
+                        <TechLink href="https://golang.org/">Go</TechLink>
+                        <TechLink href="https://www.python.org/">Python</TechLink>
+                        <TechLink href="https://www.typescriptlang.org/">TypeScript</TechLink>
+                        <TechLink href="https://www.postgresql.org/">SQL</TechLink>
+                        <br/>
+                        <InlineCode style={{ color: '#959595' }}>Learning</InlineCode>
+                        <TechLink href="https://www.rust-lang.org/" dim>Rust</TechLink>
+                        <TechLink href="https://ziglang.org/" dim>Zig</TechLink>
+                        <TechLink href="https://en.cppreference.com/w/c" dim>C</TechLink>
+                </>,
+                images: []
+                },
+                {
+                title: 'Infrastructure & Cloud',
+                description: <>
+                        <TechLink href="https://www.docker.com/">Docker</TechLink>
+                        <TechLink href="https://kubernetes.io/">Kubernetes</TechLink>
+                        <TechLink href="https://www.terraform.io/">Terraform</TechLink>
+                        <TechLink href="https://helm.sh/" dim>Helm</TechLink>
+                        <TechLink href="https://github.com/features/actions" dim>GitHub Actions</TechLink>
+                        <br/>
+                        <TechLink href="https://aws.amazon.com/" dim>AWS (S3, EKS, EC2, Glue, Batch)</TechLink>
+                        <TechLink href="https://azure.microsoft.com/" dim>Azure (Blob, Copilot Studio)</TechLink>
+                        <br/>
+                        <TechLink href="https://nginx.org/" dim>Nginx</TechLink>
+                        <TechLink href="https://caddyserver.com/" dim>Caddy</TechLink>
+                        <TechLink href="https://www.linux.org/" dim>Linux (WSL, Arch, Ubuntu, RockyLinux)</TechLink>
+                        <TechLink href="https://fastapi.tiangolo.com/" dim>FastAPI</TechLink>
+                </>,
+                images: []
+                },
+                {
+                title: 'Data & ML',
+                description: <>
+                        <TechLink href="https://huggingface.co/">Hugging Face</TechLink>
+                        <TechLink href="https://pytorch.org/">PyTorch (Geometric)</TechLink>
+                        <TechLink href="https://pola.rs/">Polars</TechLink>
+                        <TechLink href="https://pandas.pydata.org/" dim>Pandas</TechLink>
+                        <TechLink href="https://numpy.org/" dim>NumPy/CuPy</TechLink>
+                        <br/>
+                        <TechLink href="https://spacy.io/" dim>spaCy</TechLink>
+                        <TechLink href="https://python.langchain.com/" dim>LangChain</TechLink>
+                        <TechLink href="https://weaviate.io/" dim>Weaviate</TechLink>
+                        <TechLink href="https://github.com/facebookresearch/faiss" dim>FAISS</TechLink>
+                        <TechLink href="https://duckdb.org/" dim>DuckDB</TechLink>
+                        <TechLink href="https://www.postgresql.org/" dim>PostgreSQL</TechLink>
+                        <TechLink href="https://cloud.google.com/bigquery" dim>BigQuery</TechLink>
+                        <br/>
+                        <InlineCode style={{ color: '#959595' }}>Self-hosted inference</InlineCode>
+                        <TechLink href="https://docs.ray.io/" dim>Ray</TechLink>
+                        <TechLink href="https://github.com/vllm-project/vllm" dim>vLLM</TechLink>
+                        <TechLink href="https://github.com/ggerganov/llama.cpp" dim>llama.cpp</TechLink>
+                        <TechLink href="https://ollama.com/" dim>Ollama</TechLink>
+                        <br/>
+                        <InlineCode style={{ color: '#b2b2b2' }}>Embeddings (Qwen, Jina AI, Voyage, OpenAI)</InlineCode>
+                        <br/>
+                        <InlineCode style={{ color: '#b2b2b2' }}>OCR (Docling, Tesseract, Mistral, Azure Document Intelligence)</InlineCode>
+                </>,
+                images: []
+                },
+                {
+                title: 'Frontend & UX',
+                description: <>
+                        <TechLink href="https://reactjs.org/">ReactJS</TechLink>
+                        <TechLink href="https://nextjs.org/">NextJS</TechLink>
+                        <TechLink href="https://tailwindcss.com/" dim>Tailwind</TechLink>
+                        <TechLink href="https://ui.shadcn.com/" dim>Shadcn</TechLink>
+                        <TechLink href="https://remix.run/" dim>RemixJS</TechLink>
+                        <TechLink href="https://hydrogen.shopify.dev/" dim>HydrogenJS</TechLink>
+                        <TechLink href="https://www.sanity.io/" dim>SanityCMS</TechLink>
+                        <TechLink href="https://www.figma.com/" dim>Figma</TechLink>
+                        <TechLink href="https://vercel.com/" dim>Vercel</TechLink>
+                </>,
+                images: []
+                },
+                {
+                title: 'Observability & Tooling',
+                description: <>
+                        <TechLink href="https://grafana.com/" dim>Grafana</TechLink>
+                        <TechLink href="https://prometheus.io/" dim>Prometheus</TechLink>
+                        <TechLink href="https://smith.langchain.com/" dim>LangSmith/Langfuse</TechLink>
+                        <TechLink href="https://aws.amazon.com/cloudwatch/" dim>CloudWatch</TechLink>
+                        <br/>
+                        <TechLink href="https://git-scm.com/" dim>Git/GitHub</TechLink>
+                        <TechLink href="https://bun.sh/" dim>Bun</TechLink>
+                        <TechLink href="https://deno.com/" dim>Deno</TechLink>
+                        <TechLink href="https://cursor.sh/" dim>Cursor</TechLink>
+                        <TechLink href="https://claude.ai/code" dim>Claude Code</TechLink>
+                        <TechLink href="https://colab.research.google.com/" dim>Google Colab</TechLink>
                 </>,
                 images: []
                 },
                 {
                 title: 'Certifications',
                 description: <>
-                Bloomberg - Bloomberg Market Concepts<br/><a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
-                Newton Venture Program - Newton Foundations <a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
-                Coursera (Imperial College London) – Mathematics for Machine Learning <br/> 
-                Wall Street prep – Accounting, LBO, DCF financial modelling.<br/> 
-                
-                FreeCodeCamp – Solidity and Smart Contracts, Blockchain
+                Boot.dev (Go, Python, Linux, Docker, Kubernetes, AI Agents)<br/>
+                Bloomberg Market Concepts <a href="https://portal.bloombergforeducation.com/certificates/fXdroDXYZac4XvXptAHjjNEo">View Credential</a><br/>
+                Wall Street Prep (Accounting, LBO, DCF Financial Modelling)<br/>
+                Newton Venture Program (Newton Foundations)<br/>
+                JetBrains RustRover (Rust Programming)<br/>
+                Exercism (Zig Programming)<br/>
+                Coursera / Imperial College London (Mathematics for Machine Learning)
                 </>,
                 images: []
                 }
@@ -307,14 +304,15 @@ const about = {
             {
                 title: 'President | Investment Society',
                 timeframe: 'Jul 2023 - Mar 2025',
-                description: <>Launched and grew the society to 100+ members, hosting guest speakers including the UK Minister for Enterprise, Markets, and Small Business, CEO of Wall Street Oasis.<br/>
-                Equities research and trading for the Bloomberg Trading Competition ('23, '24); M&A strategic review for National Investment Banking Competition ('22,'23).</>
+                description: <>Launched and grew the society to 100+ members, hosting speakers including the UK Minister for Enterprise, Markets, and Small Business and CEO of Wall Street Oasis.<br/>
+                Equities research and trading for the Bloomberg Trading Competition ('23, '24); M&A strategic review for National Investment Banking Competition ('22, '23).<br/>
+                Established long-term vision, operating procedures, and handover including automated forms to reduce churn and enable scaling to 200+ members.</>
             },
             {
                 title: 'Vice President & Treasurer | Debating Society',
                 timeframe: 'Sep 2023 - Jul 2024',
                 description: <>Managed society finance with payment request forms and invoices. Led sessions, wrote and chaired motions and produced marketing materials.<br/>
-                Competed at the World Universities Debating Competition (‘23) in Madrid; hosted the East Midlands Debating Competition (‘24) for 7 universities.</>
+                Competed at the World Universities Debating Competition ('23) in Madrid; hosted the East Midlands Debating Competition ('24) for 7 universities.</>
             },
             {
                 title: 'Startup Mentor | Warwick Incubator, Warwick University Business School',
@@ -324,12 +322,7 @@ const about = {
             {
                 title: 'Finance Executive | Enactus UK',
                 timeframe: 'Sep 2024 - May 2025',
-                description: <>Managed society finances and solo-developed a digital app for the 'Save Reality' project tackling youth knife crime.</>
-            },
-            {
-                title: 'Course Representative - Economics | NTSU',
-                timeframe: 'Oct 2022 - Jul 2023',
-                description: <>Surveyed and converted feedback into recommendations, presented to university administration, to advocate key issues on behalf of my cohort.</>
+                description: <>Managed society finances and built a digital webapp for the 'Save Reality' project tackling youth knife crime, applying a network-based propagation thesis to model intervention points.</>
             },
             {
                 title: 'Volunteer Producer (Elections) | Sky News',

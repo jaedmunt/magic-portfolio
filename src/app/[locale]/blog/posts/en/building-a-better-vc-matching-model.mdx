@@ -13,7 +13,7 @@ The first matcher I built constructed a network graph made of edges and nodes wh
 
 Frankly, I fell on my face, and then built a really good matcher from what I learnt. Here's what went wrong, how I fixed it, and what I would do better.
 
-I will keep this a relatively short, snappy, and handwritten rumination (minus any proprietary info or implementation — sorry).
+I will keep this a relatively short, snappy, and handwritten rumination (minus any proprietary info or implementation, sorry).
 
 I hope that this is a case study on avoiding potholes, and also encouragement to anybody scoping out or building something career critical. It is a little unnerving when it doesn't go how you expect, but it's not over until you stop trying!
 
@@ -34,15 +34,15 @@ I did eventually build a better matcher by understanding both the problem, avail
 
 Surely venture investment is network driven. Investors co-invest. They invest in similar themes. Funds publish sector mandates. Geographies overlap.
 
-So I built a homogenous (side note — should have been heterogenous!) network graph where the edges were high level features such as geography and sector and the nodes were investors and startups.
+So I built a homogenous (side note, should have been heterogenous!) network graph where the edges were high level features such as geography and sector and the nodes were investors and startups.
 
 I still maintain that graphs are great and incredibly useful, but my failure was thinking that I could hard encode the features that make an investment decision in a few high level edges.
 
 I mean if I like berries and you've got blueberries, we'd be a good match?
 
-Node — you. Node: me. Edge: likes blueberries. Sweet.
+Node, you. Node: me. Edge: likes blueberries. Sweet.
 
-Node A — Investor. Node B: Startup. Edge: build/invests in ClimateTech. Pass (why?).
+Node A, Investor. Node B: Startup. Edge: build/invests in ClimateTech. Pass (why?).
 
 Scale that up to a few more features and surely the ones with the most overlap would be good? Pfft no.
 
@@ -79,7 +79,7 @@ Think of 5 friends in your friend group, unless you use Arch btw. I'm going to a
 - A, B, and D regularly end up at the same group dinners.
 - E almost never shows up to any of these shared activities.
 
-You don't model why — work schedules, interests, personalities, proximity, or coincidence. The shared activities implicitly encode those hidden variables. The graph captures outcomes, not motivations, and that abstraction is exactly what makes it predictive.
+You don't model why, work schedules, interests, personalities, proximity, or coincidence. The shared activities implicitly encode those hidden variables. The graph captures outcomes, not motivations, and that abstraction is exactly what makes it predictive.
 
 If you scrolled Instagram reels for any substantial amount of time today, you might feel the same kind of intuition. Meta doesn't parse and organise all the complex features behind the videos on its platform. It says that because your mates liked this video and you liked another one that they they liked, you'll probably also like this.
 
