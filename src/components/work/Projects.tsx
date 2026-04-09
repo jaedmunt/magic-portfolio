@@ -6,9 +6,10 @@ import { ProjectCard } from '@/components';
 interface ProjectsProps {
     range?: [number, number?];
     locale: string;
+    hideImages?: boolean;
 }
 
-export function Projects({ range, locale }: ProjectsProps) {
+export function Projects({ range, locale, hideImages = false }: ProjectsProps) {
     let allProjects = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
 
     const sortedProjects = allProjects.sort((a, b) => {
@@ -27,7 +28,7 @@ export function Projects({ range, locale }: ProjectsProps) {
                 <ProjectCard
                     key={post.slug}
                     href={`work/${post.slug}`}
-                    images={post.metadata.images}
+                    images={hideImages ? [] : post.metadata.images}
                     title={post.metadata.title}
                     description={post.metadata.summary}
                     content={post.content}

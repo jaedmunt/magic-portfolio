@@ -80,6 +80,7 @@ export default function Home(
 				fillWidth
 				direction="column"
 				paddingY="m" gap="m">
+					<TechLinkProvider>
 					<Flex
 						direction="column"
 						fillWidth gap="m"
@@ -147,7 +148,6 @@ export default function Home(
 							})()}
 						</Flex>
 						{('display' in about.technical ? about.technical.display : true) && (
-						<TechLinkProvider>
 						<Flex fillWidth direction="column" paddingY="4" gap="s">
 							<Flex
 								direction="row"
@@ -179,12 +179,11 @@ export default function Home(
 								))}
 							</Flex>
 						</Flex>
-						</TechLinkProvider>
 					)}
-						
+
 					</Flex>
-					
-				
+					</TechLinkProvider>
+
 			</Flex>
 			<Flex
 				fillWidth
@@ -195,7 +194,7 @@ export default function Home(
 					username="jaedmunt">
 				</GitHubCalendar>
 			</Flex>
-			<Projects range={[1,1]} locale={locale}/>
+			<Projects range={[1,1]} locale={locale} hideImages/>
 			
 			
 			
@@ -204,7 +203,7 @@ export default function Home(
 					<Posts range={[1,2]} columns="2" locale={locale}/>
 				</Flex>
 			)}
-			<Projects range={[2]} locale={locale}/>
+			<Projects range={[2]} locale={locale} hideImages/>
 			{ newsletter.display &&
 				<Mailchimp newsletter={newsletter} />
 			}
